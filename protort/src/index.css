@@ -1,1 +1,6 @@
 @import url(./vendor/normalize.css);
+@import url(./blocks/scroll-container/scroll-container.css);
+@import url(./blocks/scroll-container/__first-part/scroll-container__first-part.css);
+@import url(./blocks/scroll-container/__second-part/scroll-container__second-part.css);
+@import url(./blocks/scroll-container/__text/scroll-container__text.css);
+@import url(./blocks/scroll-container/__image/scroll-container__image.css);
