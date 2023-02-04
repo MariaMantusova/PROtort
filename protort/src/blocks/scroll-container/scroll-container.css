@@ -1,13 +1,12 @@
 .scroll-container {
-    background-color: #FFFAFA;
+    background-color: #FAF0E6;
     overflow: hidden;
     padding-top: 5px;
     padding-bottom: 5px;
     display: flex;
     text-transform: uppercase;
     margin: 0;
-    font-family: "Lexend Deca", sans-serif;
     font-size: 14px;
     font-weight: lighter;
-    color: #B22222;
+    color: #8B4513;
 }
