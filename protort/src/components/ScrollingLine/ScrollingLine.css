@@ -1,5 +1,5 @@
 .scroll-container {
-    background-color: #FAF0E6;
+    background-color: #6F4E37;
     overflow: hidden;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -8,5 +8,5 @@
     margin: 0;
     font-size: 14px;
     font-weight: lighter;
-    color: #8B4513;
+    color: #FAF0E6;
 }
