@@ -1,21 +1,15 @@
-import Marquee from "react-fast-marquee";
+import React from "react";
+import {Route, Routes} from "react-router-dom";
+import Main from "./Main/Main";
 
 function App() {
     return (
-        <div className="page">
-            <Marquee className="scroll-container" direction="right" gradient={false}>
-                Скидка на первый заказ 10%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Скидка на первый заказ 10%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Скидка на первый
-                заказ 10%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Скидка на первый заказ 10%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Скидка на первый заказ
-                10%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Скидка на первый заказ 10%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            </Marquee>
-            <header className="header">
-                <nav className="header__nav">
-                    <a className="header__link" href="#">Каталог</a>
-                    <a className="header__link" href="#">Заказ</a>
-                    <a className="header__link" href="#">О нас</a>
-                </nav>
-            </header>
-        </div>
+        <Routes>
+            <Route path="/" element={<Main/>}/>
+            <Route path="/catalog" element={<Main/>}/>
+            <Route path="/order" element={<Main/>}/>
+            <Route path="/about-us" element={<Main/>}/>
+        </Routes>
     );
 }
 

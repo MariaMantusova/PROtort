@@ -1,0 +1,31 @@
+.header {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    background-color: #8B4513;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    justify-content: center;
+}
+
+.header__logo {
+    height: 50px;
+}
+
+.header__nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+.header__link {
+    font-size: 16px;
+    text-decoration: none;
+    color: #FAF0E6;
+    font-weight: lighter;
+}
+
+.header__link_active {
+    font-weight: bold;
+}

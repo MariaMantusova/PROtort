@@ -1,5 +1,19 @@
 @import url(./vendor/normalize.css);
-@import url(./blocks/scroll-container/scroll-container.css);
-@import url(./blocks/header/header.css);
-@import url(./blocks/header/__nav/header__nav.css);
-@import url(./blocks/header/__link/header__link.css);
+
+body {
+    background-color: #FFFFFF;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    font-family: "Lexend Deca", sans-serif;
+    position: relative;
+    line-height: 1.2;
+    min-width: 320px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+}
