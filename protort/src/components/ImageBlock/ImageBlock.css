@@ -39,25 +39,3 @@
     color: #FAF0E6;
     margin-left: 1000px;
 }
-
-.image-block__button {
-    margin-bottom: 30px;
-    height: 200px;
-    width: 200px;
-    border-radius: 50%;
-    background-color: rgba(250,240,230, .3);
-    border: 1px solid #FAF0E6;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    margin-top: 128px;
-    margin-left: 1120px;
-}
-
-.image-block__button-text {
-    margin: 0;
-    color: #FAF0E6;
-    font-size: 18px;
-    max-width: 70px;
-}
