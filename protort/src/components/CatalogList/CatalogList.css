@@ -1,0 +1,8 @@
+.catalog__list {
+    margin-top: 45px;
+    margin-bottom: 0;
+    align-self: center;
+    display: flex;
+    gap: 60px;
+    list-style: none;
+}
