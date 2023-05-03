@@ -4,6 +4,7 @@ import ScrollingLine from "../ScrollingLine/ScrollingLine";
 import ImageBlock from "../ImageBlock/ImageBlock";
 import CatalogBlock from "../CatalogBlock/CatalogBlock";
 import CakeBlock from "../CakeBlock/CakeBlock";
+import AboutUsBlock from "../AboutUsBlock/AboutUsBlock";
 
 function Main(props) {
     return (
@@ -13,6 +14,7 @@ function Main(props) {
             <ImageBlock/>
             <CatalogBlock catalogArray={props.catalogBlockArray}/>
             <CakeBlock/>
+            <AboutUsBlock/>
         </>
     );
 }
