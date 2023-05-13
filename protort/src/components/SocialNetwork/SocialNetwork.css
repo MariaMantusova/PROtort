@@ -1,0 +1,34 @@
+.social-networks__item {
+    display: flex;
+    flex-direction: column;
+}
+
+.social-network {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 160px;
+}
+
+.social-network__black {
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.social-network__brown {
+    border: 1px solid #6F4E37;
+    border-radius: 20px;
+}
+
+.social-network__icon {
+    max-width: 125px;
+    max-height: 70px;
+}
+
+.social-network__span {
+    margin-top: 3px;
+    margin-bottom: 0;
+    font-size: 8px;
+    text-align: center;
+}

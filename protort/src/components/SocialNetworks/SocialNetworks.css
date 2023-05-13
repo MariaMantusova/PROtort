@@ -1,0 +1,24 @@
+.social-networks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 65px;
+    padding-bottom: 85px;
+}
+
+.social-networks__title {
+    color: #6F4E37;
+    font-size: 25px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.social-networks__list {
+    list-style: none;
+    padding: 0;
+    margin-top: 95px;
+    margin-bottom: 0;
+    display: flex;
+    gap: 50px;
+
+}

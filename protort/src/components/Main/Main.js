@@ -5,6 +5,7 @@ import ImageBlock from "../ImageBlock/ImageBlock";
 import CatalogBlock from "../CatalogBlock/CatalogBlock";
 import CakeBlock from "../CakeBlock/CakeBlock";
 import AboutUsBlock from "../AboutUsBlock/AboutUsBlock";
+import SocialNetworks from "../SocialNetworks/SocialNetworks";
 
 function Main(props) {
     return (
@@ -15,6 +16,7 @@ function Main(props) {
             <CatalogBlock catalogArray={props.catalogBlockArray}/>
             <CakeBlock/>
             <AboutUsBlock/>
+            <SocialNetworks/>
         </>
     );
 }
