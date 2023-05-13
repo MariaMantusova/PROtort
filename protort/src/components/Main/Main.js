@@ -6,6 +6,7 @@ import CatalogBlock from "../CatalogBlock/CatalogBlock";
 import CakeBlock from "../CakeBlock/CakeBlock";
 import AboutUsBlock from "../AboutUsBlock/AboutUsBlock";
 import SocialNetworks from "../SocialNetworks/SocialNetworks";
+import Footer from "../Footer/Footer";
 
 function Main(props) {
     return (
@@ -17,6 +18,7 @@ function Main(props) {
             <CakeBlock/>
             <AboutUsBlock/>
             <SocialNetworks/>
+            <Footer/>
         </>
     );
 }
