@@ -4,6 +4,7 @@ import Main from "./Main/Main";
 import {catalogBlockArray, catalogPageArray} from "../data/data";
 import CatalogPage from "./CatalogPage/CatalogPage";
 import OrderPage from "./OrderPage/OrderPage";
+import AboutUsPage from "./AboutUsPage/AboutUsPage";
 
 function App() {
     return (
@@ -11,7 +12,7 @@ function App() {
             <Route path="/" element={<Main catalogBlockArray={catalogBlockArray}/>}/>
             <Route path="/catalog" element={<CatalogPage catalogPageArray={catalogPageArray}/>}/>
             <Route path="/order" element={<OrderPage/>}/>
-            <Route path="/about-us" element={<Main/>}/>
+            <Route path="/about-us" element={<AboutUsPage/>}/>
         </Routes>
     );
 }
