@@ -11,7 +11,7 @@ import bentoSnikers from "../images/bento-snikers.jpeg";
 import bentoBirthday from "../images/bento-birthday.jpeg";
 import bentoHello from "../images/bento-hello.jpeg";
 import bento14 from "../images/bento-14.jpeg";
-import bentoHeart from "../images/bento-heart.jpeg";
+import bentoHeart from "../images/bento-heart.jpg";
 import bentoStrawberry from "../images/bento-strawberry.jpeg";
 import bentoTruffle from "../images/bento-truffle.jpeg";
 import cakePopsGift from "../images/cake-pops-gift.jpeg";
@@ -251,4 +251,4 @@ const giftsArray = [
     },
 ];
 
-export {catalogBlockArray, catalogPageArray};
+export {catalogBlockArray, catalogPageArray, bentoArray, strawberryArray, giftsArray, allGiftsArray, bananasArray};

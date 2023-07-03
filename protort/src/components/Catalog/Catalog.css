@@ -1,1 +1,23 @@
+.gifts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.gifts__title {
+    font-size: 45px;
+    font-weight: 600;
+    margin-top: 52px;
+    margin-bottom: 70px;
+}
+
+.gifts__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 70px;
+    column-gap: 100px;
+    row-gap: 70px;
+}
