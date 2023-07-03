@@ -7,7 +7,7 @@ function CatalogList(props) {
         <ul className={`catalog__list ${props.class}`}>
             {props.catalogArray.map((catalogItem, index) => (
                 <CatalogItem key={index} indx={index} image={catalogItem.image} alt={catalogItem.description}
-                             description={catalogItem.description} price={catalogItem.price}/>
+                             description={catalogItem.description} price={catalogItem.price} path={catalogItem.path}/>
             ))}
         </ul>
     )

@@ -11,6 +11,11 @@ function App() {
         <Routes>
             <Route path="/" element={<Main catalogBlockArray={catalogBlockArray}/>}/>
             <Route path="/catalog" element={<CatalogPage catalogPageArray={catalogPageArray}/>}/>
+            <Route path="/catalog-all" element={<CatalogPage catalogPageArray={catalogPageArray}/>}/>
+            <Route path="/catalog-strawberry" element={<CatalogPage catalogPageArray={catalogPageArray}/>}/>
+            <Route path="/catalog-bananas" element={<CatalogPage catalogPageArray={catalogPageArray}/>}/>
+            <Route path="/catalog-bento" element={<CatalogPage catalogPageArray={catalogPageArray}/>}/>
+            <Route path="/catalog-gifts" element={<CatalogPage catalogPageArray={catalogPageArray}/>}/>
             <Route path="/order" element={<OrderPage/>}/>
             <Route path="/about-us" element={<AboutUsPage/>}/>
         </Routes>

@@ -1,7 +1,7 @@
 import React from "react";
 import "./Catalog.css";
 
-function Catalog() {
+function Catalog(props) {
     return(
        <>
        </>
