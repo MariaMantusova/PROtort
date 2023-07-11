@@ -20,6 +20,7 @@ import eskimo4 from "../images/eskimo-4.jpeg";
 import eskimoWhite from "../images/eskimo-white.jpeg";
 import strawberry6 from "../images/strawberry-6.jpeg";
 import strawberry20 from "../images/strawberry-20.jpeg";
+import bentoBananCaramel from "../images/bento-banan&caramel.png";
 
 const catalogBlockArray = [
     {
@@ -97,7 +98,7 @@ const bentoArray = [
         descriptionAll: "Нежные ванильные бисквиты, насыщенная ягодная начинка (вишня, смородина), воздушный крем-чиз.",
     },
     {
-        image: bentoCaramel,
+        image: bentoBananCaramel,
         price: 1250,
         weight: 500,
         descriptionShort: "Бенто-торт «Банан-карамель»\n",
