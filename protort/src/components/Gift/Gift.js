@@ -12,7 +12,7 @@ function Gift(props) {
                 <button className="gift__button-more">Подробнее</button>
                 <button className="gift__button-order">Заказать</button>
             </li>
-            <GiftInfoPopup gift={props.catalogItem}/>
+            {/*<GiftInfoPopup gift={props.catalogItem}/>*/}
         </>
     )
 }
