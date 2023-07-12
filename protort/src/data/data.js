@@ -6,7 +6,6 @@ import setImage from "../images/set-catalog.jpg";
 import allImage from "../images/all-catalog.jpg";
 import bananas8 from "../images/bananas-8.jpeg";
 import bentoBerry from "../images/bento-berry.jpeg";
-import bentoCaramel from "../images/bento-caramel.jpeg";
 import bentoSnikers from "../images/bento-snikers.jpeg";
 import bentoBirthday from "../images/bento-birthday.jpeg";
 import bentoHello from "../images/bento-hello.jpeg";
@@ -86,30 +85,34 @@ const bentoArray = [
     {
         image: bentoSnikers,
         price: 1250,
-        weight: "450 - 550",
+        weight: "450 - 550 грамм",
         descriptionShort: "Бенто-торт «Сникерс»\n",
         descriptionAll: "Влажные, насыщенные шоколадные бисквиты, тянущаяся карамель, обжаренный арахис, шоколадный крем-чиз, сливочный крем с арахисовой пастой.",
+        measureType: "Вес: ",
     },
     {
         image: bentoBerry,
         price: 1250,
-        weight: 500,
+        weight: "500 грамм",
         descriptionShort: "Бенто-торт «Ягодный»\n",
         descriptionAll: "Нежные ванильные бисквиты, насыщенная ягодная начинка (вишня, смородина), воздушный крем-чиз.",
+        measureType: "Вес: ",
     },
     {
         image: bentoBananCaramel,
         price: 1250,
-        weight: 500,
+        weight: "500 грамм",
         descriptionShort: "Бенто-торт «Банан-карамель»\n",
         descriptionAll: "Вванильные/Шоколадные бисквиты, карамелизированный банан, сливочный крем.",
+        measureType: "Вес: ",
     },
     {
         image: bentoTruffle,
         price: 1450,
-        weight: "до 550",
+        weight: "до 550 грамм",
         descriptionShort: "Бенто-торт «Шоколадный Трюфель»\n",
         descriptionAll: "Влажные шоколадные бисквиты, ганаш на молочном бельгийском шоколаде.",
+        measureType: "Вес: ",
     },
 ];
 
@@ -117,104 +120,117 @@ const strawberryArray = [
     {
         image: strawberry6,
         price: 900,
-        count: 6,
+        count: "6 штук",
         descriptionShort: "Клубника в шоколаде 6 штук",
         descriptionAll: "Спелая, вкусная клубника, покрытая бельгийским шоколадом.",
+        measureType: "Количество: ",
     },
     {
         image: strawberry20,
         price: 2450,
-        count: 20,
+        count: "20 штук",
         descriptionShort: "Клубника в шоколаде 20 штук",
         descriptionAll: "Спелая, вкусная клубника, покрытая бельгийским шоколадом.",
+        measureType: "Количество: ",
     },
-
 ];
 
 const allGiftsArray = [
     {
         image: strawberry6,
         price: 900,
-        count: 6,
+        count: "6 штук",
         descriptionShort: "Клубника в шоколаде 6 штук",
         descriptionAll: "Спелая, вкусная клубника, покрытая бельгийским шоколадом.",
+        measureType: "Количество: ",
     },
     {
         image: strawberry20,
         price: 2450,
-        count: 20,
+        count: "20 штук",
         descriptionShort: "Клубника в шоколаде 20 штук",
         descriptionAll: "Спелая, вкусная клубника, покрытая бельгийским шоколадом.",
+        measureType: "Количество: ",
     },
     {
         image: bananas8,
         price: 1050,
-        weight: "до 550",
+        count: "8 штук",
         descriptionShort: "Бананы в шоколаде 8 штук",
         descriptionAll: "Нежные бананы в молочном бельгийском шоколаде",
+        measureType: "Количество: ",
     },
     {
         image: eskimo4,
         price: 1250,
-        weight: "до 500",
+        weight: "до 500 грамм",
         descriptionShort: "Набор «Эскимо в шоколаде»\n",
         descriptionAll: "Всем знакомая, из детства - «Картошка», покрытая молочным бельгийским шоколадом",
+        measureType: "Вес: ",
     },
     {
         image: eskimoWhite,
         price: 1250,
-        weight: "до 550",
+        weight: "до 550 грамм",
         descriptionShort: "Набор «Эскимо в белом шоколаде»\n",
         descriptionAll: "Всем знакомая, из детства - «Картошка», покрытая белым бельгийским шоколадом",
+        measureType: "Вес: ",
     },
     {
         image: cakePopsGift,
         price: 1250,
-        weight: "до 550",
+        weight: "до 550 грамм",
         descriptionShort: "Набор «Подарочный»\n",
         descriptionAll: "Всем знакомая, из детства - «Картошка», покрытая белым бельгийским шоколадом и нежные бананы в молочном бельгийском шоколаде",
+        measureType: "Вес: ",
     },
     {
         image: bentoBirthday,
         price: 1250,
-        weight: "450 - 550",
+        weight: "450 - 550 грамм",
         descriptionShort: "Бенто-торт «Happy Birthday»\n",
         descriptionAll: "Цвет торта и надпись зависит от вашего желания. Начинка на выбор.",
+        measureType: "Вес: ",
     },
     {
         image: bento14,
         price: 1250,
-        weight: 500,
+        weight: "500 грамм",
         descriptionShort: "Бенто-торт «14 лет выдержки»\n",
         descriptionAll: "Возраст и цвет торта зависит от вашего желания. Начинка на выбор.",
+        measureType: "Вес: ",
     },
     {
         image: bentoHello,
         price: 1250,
-        weight: 500,
+        weight: "500 грамм",
         descriptionShort: "Бенто-торт «Hello»\n",
         descriptionAll: "Актуальный декор для дня рождения, цвет и возраст по вашему желанию. Начинка на выбор",
+        measureType: "Вес: ",
     },
     {
         image: bentoPremium,
         price: 1600,
-        weight: "до 600",
+        weight: "до 600 грамм",
         descriptionShort: "Бенто-торт «Нежность Премиум»\n",
         descriptionAll: "Нежный декор торта с цветами из белого бельгийского шоколада. Начинка на выбор.",
+        measureType: "Вес: ",
     },
     {
         image: bentoStrawberry,
         price: 1500,
-        weight: "до 550",
+        weight: "до 550 грамм",
         descriptionShort: "Бенто-торт «Клубничный Люкс»\n",
         descriptionAll: "Летний декор торта, с трендовым кремовым декором и свежей клубникой. Начинка на выбор.",
+        measureType: "Вес: ",
     },
     {
         image: bentoHeart,
         price: 1250,
-        weight: "до 550",
+        weight: "до 550 грамм",
         descriptionShort: "Бенто-торт «Сердце»\n",
         descriptionAll: "Идеальный вариант для подарка любимому человеку, цвет можно заменить и добавить надпись. Начинка на выбор.",
+        measureType: "Вес: ",
     },
 ];
 
@@ -222,9 +238,10 @@ const bananasArray = [
     {
         image: bananas8,
         price: 1050,
-        weight: "до 550",
+        count: "8 штук",
         descriptionShort: "Бананы в шоколаде 8 штук",
         descriptionAll: "Нежные бананы в молочном бельгийском шоколаде",
+        measureType: "Количество: ",
     },
 ];
 
@@ -232,23 +249,26 @@ const giftsArray = [
     {
         image: eskimo4,
         price: 1250,
-        weight: "до 500",
+        weight: "до 500 грамм",
         descriptionShort: "Набор «Эскимо в шоколаде»\n",
         descriptionAll: "Всем знакомая, из детства - «Картошка», покрытая молочным бельгийским шоколадом",
+        measureType: "Вес: ",
     },
     {
         image: eskimoWhite,
         price: 1250,
-        weight: "до 550",
+        weight: "до 550 грамм",
         descriptionShort: "Набор «Эскимо в белом шоколаде»\n",
         descriptionAll: "Всем знакомая, из детства - «Картошка», покрытая белым бельгийским шоколадом",
+        measureType: "Вес: ",
     },
     {
         image: cakePopsGift,
         price: 1250,
-        weight: "до 550",
+        weight: "до 550 грамм",
         descriptionShort: "Набор «Подарочный»\n",
         descriptionAll: "Всем знакомая, из детства - «Картошка», покрытая белым бельгийским шоколадом и нежные бананы в молочном бельгийском шоколаде",
+        measureType: "Вес: ",
     },
 ];
 
