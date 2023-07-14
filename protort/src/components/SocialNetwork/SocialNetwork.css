@@ -11,6 +11,10 @@
     height: 160px;
 }
 
+.social-network:hover {
+    border: none;
+}
+
 .social-network__black {
     border: 1px solid black;
     border-radius: 20px;
@@ -24,6 +28,11 @@
 .social-network__icon {
     max-width: 125px;
     max-height: 70px;
+    transition: transform 0.5s ease-out;
+}
+
+.social-network__icon:hover {
+    transform: scale(1.15);
 }
 
 .social-network__span {

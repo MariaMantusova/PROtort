@@ -8,6 +8,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: relative;
 }
 
 .item__image {
@@ -16,7 +17,38 @@
     object-fit: cover;
     border-radius: 50%;
     object-position: center;
-    margin-bottom: 25px;
+}
+
+.item__image-container {
+    display: flex;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    padding-bottom: 25px;
+}
+
+.item__image-container::before {
+    content: "";
+    transition: background-color 0.5s ease;
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    font-size: 17px;
+    color: #FAF0E6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 25px;
+    z-index: 2;
+    border-radius: 50%;
+    font-weight: 700;
+}
+
+.item__image-container:hover::before{
+    content: "Выбрать";
+    background-color: rgba(0, 0, 0, .3);
 }
 
 .item__description {

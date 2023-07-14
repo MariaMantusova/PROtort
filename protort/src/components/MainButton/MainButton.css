@@ -11,6 +11,16 @@
     text-decoration: none;
     margin-top: 128px;
     margin-left: 1120px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.image-block__button:hover {
+    transform: scale(1.1);
+    background-color: rgba(250,240,230, .4);
+}
+
+.image-block__button:active {
+    background-color: rgba(0, 0, 0, .4);
 }
 
 .image-block__button-text {

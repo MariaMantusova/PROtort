@@ -29,6 +29,10 @@
     font-weight: lighter;
 }
 
+.header__link:hover {
+    font-weight: bold;
+}
+
 .header__link_active {
     font-weight: bold;
 }
