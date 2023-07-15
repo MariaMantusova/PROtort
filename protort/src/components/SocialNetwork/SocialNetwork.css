@@ -11,6 +11,13 @@
     height: 160px;
 }
 
+@media screen and (max-width: 1050px) {
+    .social-network {
+        max-width: 100px;
+        max-height: 100px;
+    }
+}
+
 .social-network__black {
     border: 1px solid black;
     border-radius: 20px;
@@ -27,6 +34,13 @@
     transition: transform 0.5s ease-out;
 }
 
+@media screen and (max-width: 1050px) {
+    .social-network__icon {
+        max-width: 75px;
+        max-height: 50px;
+    }
+}
+
 .social-network__icon:hover {
     transform: scale(1.15);
 }
@@ -36,4 +50,11 @@
     margin-bottom: 0;
     font-size: 8px;
     text-align: center;
+    align-self: center;
+}
+
+@media screen and (max-width: 1050px) {
+    .social-network__span {
+        max-width: 75px;
+    }
 }

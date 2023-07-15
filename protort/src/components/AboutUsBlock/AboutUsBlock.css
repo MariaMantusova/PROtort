@@ -7,10 +7,23 @@
     background-color: #FAF0E6;
 }
 
+@media screen and (max-width: 1050px) {
+    .about-us {
+        gap: 70px;
+    }
+}
+
 .about-us__photo {
     max-width: 405px;
     max-height: 475px;
     border-radius: 20px;
+}
+
+@media screen and (max-width: 1050px) {
+    .about-us__photo {
+        max-width: 300px;
+        max-height: 350px;
+    }
 }
 
 .about-us__container {
@@ -20,6 +33,13 @@
     gap: 35px;
 }
 
+@media screen and (max-width: 1050px) {
+    .about-us__container {
+        max-width: 400px;
+        gap: 20px;
+    }
+}
+
 .about-us__header {
     margin: 0;
     color: #6F4E37;
@@ -27,8 +47,20 @@
     font-size: 42px;
 }
 
+@media screen and (max-width: 1050px) {
+    .about-us__header {
+        font-size: 35px;
+    }
+}
+
 .about-us__info {
     font-size: 20px;
     margin: 0;
     line-height: 1.5;
+}
+
+@media screen and (max-width: 1050px) {
+    .about-us__info {
+        font-size: 17px;
+    }
 }
