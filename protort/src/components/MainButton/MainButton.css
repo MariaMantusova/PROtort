@@ -23,6 +23,14 @@
     }
 }
 
+@media screen and (max-width: 880px) {
+    .image-block__button {
+        height: 120px;
+        width: 120px;
+        margin-right: 50px;
+    }
+}
+
 .image-block__button:hover {
     transform: scale(1.1);
     background-color: rgba(250,240,230, .4);
@@ -36,5 +44,13 @@
     margin: 0;
     color: #FAF0E6;
     font-size: 18px;
+    text-align: center;
     max-width: 70px;
+}
+
+@media screen and (max-width: 880px) {
+    .image-block__button-text {
+        font-size: 12px;
+        max-width: 60px;
+    }
 }

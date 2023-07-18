@@ -14,12 +14,24 @@
     margin-left: 130px;
 }
 
+@media screen and (max-width: 880px) {
+    .header__logo {
+        margin-left: 70px;
+    }
+}
+
 .header__nav {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 65px;
     margin-right: 150px;
+}
+
+@media screen and (max-width: 880px) {
+    .header__nav {
+        margin-right: 80px;
+    }
 }
 
 .header__link {

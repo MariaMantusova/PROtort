@@ -46,6 +46,12 @@
     }
 }
 
+@media screen and (max-width: 880px) {
+    .image-block__title {
+        font-size: 30px;
+    }
+}
+
 .image-block__subtitle {
     margin-top: 0;
     margin-bottom: 0;
@@ -67,5 +73,11 @@
     .image-block__subtitle {
         margin-right: 40px;
         font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 880px) {
+    .image-block__subtitle {
+        display: none;
     }
 }

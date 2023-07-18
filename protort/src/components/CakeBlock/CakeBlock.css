@@ -10,6 +10,12 @@
     z-index: 0;
 }
 
+@media screen and (max-width: 880px) {
+    .cake-block {
+        padding-top: 0;
+    }
+}
+
 .cake-block::before {
     content: "";
     transition: background-color 0.5s ease;
@@ -20,4 +26,10 @@
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.4);
     z-index: -1;
+}
+
+@media screen and (max-width: 880px) {
+    .cake-block::before {
+        max-height: 300px;
+    }
 }

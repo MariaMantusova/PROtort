@@ -5,6 +5,13 @@
     padding-bottom: 90px;
 }
 
+@media screen and (max-width: 880px) {
+    .catalog {
+        padding-top: 40px;
+        padding-bottom: 70px;
+    }
+}
+
 .catalog__header {
     margin-left: 80px;
     color: #6F4E37;
@@ -12,4 +19,12 @@
     font-size: 38px;
     margin-bottom: 20px;
     margin-top: 0;
+}
+
+@media screen and (max-width: 880px) {
+    .catalog__header {
+        font-size: 34px;
+        margin: 0;
+        align-self: center;
+    }
 }
