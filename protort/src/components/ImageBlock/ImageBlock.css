@@ -10,6 +10,15 @@
     position: relative;
 }
 
+@media screen and (max-width: 670px) {
+    .image-block {
+        max-height: 50vh;
+        padding-bottom: 180px;
+        box-sizing: border-box;
+        padding-top: 80px;
+    }
+}
+
 .image-block::before {
     content: "";
     transition: background-color 0.5s ease;
@@ -49,6 +58,14 @@
 @media screen and (max-width: 880px) {
     .image-block__title {
         font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    .image-block__title {
+        margin-top: 0;
+        text-align: center;
+        font-size: 27px;
     }
 }
 

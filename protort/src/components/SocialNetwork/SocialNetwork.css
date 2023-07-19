@@ -18,6 +18,13 @@
     }
 }
 
+@media screen and (max-width: 670px) {
+    .social-network {
+        max-width: 85px;
+        max-height: 85px;
+    }
+}
+
 .social-network__black {
     border: 1px solid black;
     border-radius: 20px;
@@ -38,6 +45,13 @@
     .social-network__icon {
         max-width: 75px;
         max-height: 50px;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    .social-network__icon {
+        max-width: 50px;
+        max-height: 40px;
     }
 }
 

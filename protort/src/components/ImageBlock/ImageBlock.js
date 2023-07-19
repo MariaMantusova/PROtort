@@ -7,7 +7,7 @@ function ImageBlock() {
         <section className="image-block">
             <h1 className="image-block__title">Вкусные подарки в Донецке и Макеевке</h1>
             <p className="image-block__subtitle">для себя и родных</p>
-            <MainButton/>
+            <MainButton class="image-block__button-main"/>
         </section>
     )
 }

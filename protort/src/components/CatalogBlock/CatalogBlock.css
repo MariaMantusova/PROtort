@@ -12,6 +12,12 @@
     }
 }
 
+@media screen and (max-width: 670px) {
+    .catalog {
+        padding-bottom: 40px;
+    }
+}
+
 .catalog__header {
     margin-left: 80px;
     color: #6F4E37;
@@ -26,5 +32,11 @@
         font-size: 34px;
         margin: 0;
         align-self: center;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    .catalog__header {
+        font-size: 28px;
     }
 }

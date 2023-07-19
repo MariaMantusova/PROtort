@@ -6,8 +6,21 @@
     justify-content: center;
 }
 
+@media screen and (max-width: 670px) {
+    .footer {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+}
+
 .footer__text {
     font-size: 12px;
     color: #FAF0E6;
     margin: 0;
+}
+
+@media screen and (max-width: 670px) {
+    .footer__text {
+        font-size: 10px;
+    }
 }

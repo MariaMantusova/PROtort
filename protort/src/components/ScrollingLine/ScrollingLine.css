@@ -10,3 +10,9 @@
     font-weight: lighter;
     color: #FAF0E6;
 }
+
+@media screen and (max-width: 670px) {
+    .scroll-container {
+        font-size: 12px;
+    }
+}

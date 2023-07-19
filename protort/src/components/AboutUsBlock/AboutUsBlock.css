@@ -23,6 +23,13 @@
     }
 }
 
+@media screen and (max-width: 670px) {
+    .about-us {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 .about-us__photo {
     max-width: 405px;
     max-height: 475px;
@@ -41,6 +48,14 @@
     .about-us__photo {
         max-width: 220px;
         max-height: 100%;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    .about-us__photo {
+        max-height: 250px;
+        border-radius: 10px;
+        width: 100%;
     }
 }
 
@@ -84,6 +99,13 @@
     }
 }
 
+@media screen and (max-width: 670px) {
+    .about-us__header {
+        display: none;
+    }
+}
+
+
 .about-us__info {
     font-size: 20px;
     margin: 0;
@@ -99,5 +121,11 @@
 @media screen and (max-width: 880px) {
     .about-us__info {
         font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    .about-us__info {
+        text-align: center;
     }
 }

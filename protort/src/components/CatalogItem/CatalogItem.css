@@ -77,10 +77,23 @@
     font-weight: 500;
     margin-bottom: 10px;
     margin-top: 0;
+    text-align: center;
+}
+
+@media screen and (max-width: 670px) {
+    .item__description {
+        font-size: 15px;
+    }
 }
 
 .item__price {
     margin: 0;
     font-size: 15px;
     font-weight: lighter;
+}
+
+@media screen and (max-width: 670px) {
+    .item__price {
+        font-size: 12px;
+    }
 }
