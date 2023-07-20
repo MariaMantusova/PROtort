@@ -1,6 +1,8 @@
 import React from "react";
 import "./Header.css";
-import {Link, NavLink} from "react-router-dom";
+import Navigation from "../Navigation/Navigation";
+import {Link} from "react-router-dom";
+import NavigationMobile from "../NavigationMobile/NavigationMobile";
 
 function Header() {
     return(
@@ -8,11 +10,8 @@ function Header() {
             <Link to="/">
                 <div className="header__logo"></div>
             </Link>
-            <nav className="header__nav">
-                <NavLink to="/catalog" className={({isActive}) => `header__link ${isActive ? "header__link_active" : ""}`}>Каталог</NavLink>
-                <NavLink to="/order" className={({isActive}) => `header__link ${isActive ? "header__link_active" : ""}`}>Заказ</NavLink>
-                <NavLink to="/about-us" className={({isActive}) => `header__link ${isActive ? "header__link_active" : ""}`}>О нас</NavLink>
-            </nav>
+            <Navigation/>
+            <NavigationMobile/>
         </header>
     )
 }

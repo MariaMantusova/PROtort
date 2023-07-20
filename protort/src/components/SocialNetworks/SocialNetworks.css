@@ -6,6 +6,13 @@
     padding-bottom: 85px;
 }
 
+@media screen and (max-width: 450px) {
+    .social-networks {
+        padding-top: 45px;
+        padding-bottom: 65px;
+    }
+}
+
 .social-networks__title {
     color: #6F4E37;
     font-size: 25px;
@@ -16,6 +23,13 @@
 @media screen and (max-width: 670px) {
     .social-networks__title {
         font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .social-networks__title {
+        font-size: 20px;
+        text-align: center;
     }
 }
 

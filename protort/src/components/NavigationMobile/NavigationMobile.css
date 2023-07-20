@@ -1,0 +1,39 @@
+.header__nav-mobile {
+    display: none;
+}
+
+@media screen and (max-width: 450px) {
+    .header__nav-mobile {
+        display: flex;
+    }
+}
+
+.header__cake-menu {
+    width: 30px;
+    height: 30px;
+    color: #6F4E37;
+    align-self: flex-end;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.header__cake-menu-close {
+    width: 25px;
+    height: 25px;
+}
+
+.header__nav-links {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(250, 240, 230, 1);
+    position: absolute;
+    top: 75px;
+    right: 0;
+    width: 40vw;
+    height: 35vh;
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    border-radius: 0 0 10px 10px;
+}
