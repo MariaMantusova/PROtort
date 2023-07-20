@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/PROtort/static/css/main.45d81102.css",
+    "main.js": "/PROtort/static/js/main.ce125576.js",
+    "static/js/787.7ab0eea7.chunk.js": "/PROtort/static/js/787.7ab0eea7.chunk.js",
+    "static/media/bento-heart.jpg": "/PROtort/static/media/bento-heart.8c9f6d8697cff01271b2.jpg",
+    "static/media/strawberry-catalog.jpg": "/PROtort/static/media/strawberry-catalog.85abba28d3944e5a6023.jpg",
+    "static/media/set-catalog.jpg": "/PROtort/static/media/set-catalog.3a34360ea39ad11c58cb.jpg",
+    "static/media/block-about-us-photo.jpg": "/PROtort/static/media/block-about-us-photo.534ada568342ccdb93a8.jpg",
+    "static/media/main-photo.jpg": "/PROtort/static/media/main-photo.7c77bb7e04cbbff266da.jpg",
+    "static/media/bento-birthday.jpeg": "/PROtort/static/media/bento-birthday.30ae6d6e079ddf4ed4d5.jpeg",
+    "static/media/bento-berry.jpeg": "/PROtort/static/media/bento-berry.298826e20c528bbc9740.jpeg",
+    "static/media/eskimo-4.jpeg": "/PROtort/static/media/eskimo-4.26ffcb6f48a9337356c3.jpeg",
+    "static/media/bananas-8.jpeg": "/PROtort/static/media/bananas-8.20db407d523436626c03.jpeg",
+    "static/media/strawberry-6.jpeg": "/PROtort/static/media/strawberry-6.252e2ee108a9a190565d.jpeg",
+    "static/media/eskimo-white.jpeg": "/PROtort/static/media/eskimo-white.84f608b3e3c59542c687.jpeg",
+    "static/media/bento-14.jpeg": "/PROtort/static/media/bento-14.2a60d13282420bc6025a.jpeg",
+    "static/media/cake-pops-gift.jpeg": "/PROtort/static/media/cake-pops-gift.e072d78f4c38b2111714.jpeg",
+    "static/media/bento-hello.jpeg": "/PROtort/static/media/bento-hello.14b0ab7caa8f06254a81.jpeg",
+    "static/media/bento-snikers.jpeg": "/PROtort/static/media/bento-snikers.4cb2ba380b0e492eac97.jpeg",
+    "static/media/banana-catalog.jpeg": "/PROtort/static/media/banana-catalog.c6a91ef7c70145d36dc5.jpeg",
+    "static/media/all-catalog.jpg": "/PROtort/static/media/all-catalog.802ae964155135b19117.jpg",
+    "static/media/bento-catalog.jpg": "/PROtort/static/media/bento-catalog.f46eb362295f09ba0d0d.jpg",
+    "static/media/bento-premium.jpeg": "/PROtort/static/media/bento-premium.79ea44db801d151385c7.jpeg",
+    "static/media/strawberry-20.jpeg": "/PROtort/static/media/strawberry-20.2f34f3a8d0d6f213056f.jpeg",
+    "static/media/bento-banan&caramel.png": "/PROtort/static/media/bento-banan&caramel.25bdaaf8f3b53b69401a.png",
+    "static/media/bento-strawberry.jpeg": "/PROtort/static/media/bento-strawberry.57781663b94cc5f456f4.jpeg",
+    "static/media/bento-truffle.jpeg": "/PROtort/static/media/bento-truffle.c4f8fd663b1ebc26d3ef.jpeg",
+    "static/media/cake-block.jpg": "/PROtort/static/media/cake-block.75e0e586b4a865b6f6e2.jpg",
+    "static/media/whatsapp.svg": "/PROtort/static/media/whatsapp.163e6c75a6e9a28fc826f385d674580a.svg",
+    "static/media/telegramm.svg": "/PROtort/static/media/telegramm.69d2fd6b353d2209ce3f373ccce6dbd8.svg",
+    "static/media/vk.svg": "/PROtort/static/media/vk.110fac012633ceef7b99aaf7eb5277e5.svg",
+    "static/media/instagram.svg": "/PROtort/static/media/instagram.859b848b2ed1f28e19a6ade5f0fcf81a.svg",
+    "index.html": "/PROtort/index.html",
+    "main.45d81102.css.map": "/PROtort/static/css/main.45d81102.css.map",
+    "main.ce125576.js.map": "/PROtort/static/js/main.ce125576.js.map",
+    "787.7ab0eea7.chunk.js.map": "/PROtort/static/js/787.7ab0eea7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.45d81102.css",
+    "static/js/main.ce125576.js"
+  ]
+}
