@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/PROtort/static/css/main.45d81102.css",
+    "main.css": "/PROtort/static/css/main.bf8e1ef7.css",
     "main.js": "/PROtort/static/js/main.63d7c435.js",
     "static/js/787.7ab0eea7.chunk.js": "/PROtort/static/js/787.7ab0eea7.chunk.js",
     "static/media/bento-heart.jpg": "/PROtort/static/media/bento-heart.8c9f6d8697cff01271b2.jpg",
@@ -32,12 +32,12 @@
     "static/media/vk.svg": "/PROtort/static/media/vk.110fac012633ceef7b99aaf7eb5277e5.svg",
     "static/media/instagram.svg": "/PROtort/static/media/instagram.859b848b2ed1f28e19a6ade5f0fcf81a.svg",
     "index.html": "/PROtort/index.html",
-    "main.45d81102.css.map": "/PROtort/static/css/main.45d81102.css.map",
+    "main.bf8e1ef7.css.map": "/PROtort/static/css/main.bf8e1ef7.css.map",
     "main.63d7c435.js.map": "/PROtort/static/js/main.63d7c435.js.map",
     "787.7ab0eea7.chunk.js.map": "/PROtort/static/js/787.7ab0eea7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.45d81102.css",
+    "static/css/main.bf8e1ef7.css",
     "static/js/main.63d7c435.js"
   ]
 }
