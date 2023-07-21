@@ -9,6 +9,12 @@
     z-index: 0;
     position: relative;
     align-items: center;
+    transition: 5s;
+
+    animation-name: animate;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
 }
 
 @media screen and (max-width: 670px) {
@@ -100,5 +106,26 @@
 @media screen and (max-width: 880px) {
     .image-block__subtitle {
         display: none;
+    }
+}
+
+@keyframes animate {
+    0% {
+        background-image: url("../../images/main-photo.jpg");
+    }
+    20% {
+        background-image: url("../../images/main-photo1.jpg");
+    }
+    40% {
+        background-image: url("../../images/main-photo2.jpg");
+    }
+    60% {
+        background-image: url("../../images/main-photo3.jpg");
+    }
+    80% {
+        background-image: url("../../images/main-photo4.jpg");
+    }
+    100% {
+        background-image: url("../../images/main-photo5.jpg");
     }
 }
