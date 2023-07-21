@@ -8,6 +8,7 @@
     width: 100%;
     z-index: 0;
     position: relative;
+    align-items: center;
 }
 
 @media screen and (max-width: 670px) {
@@ -36,14 +37,13 @@
     color: #FAF0E6;
     margin-bottom: 0;
     font-weight: 400;
-    margin-left: 70px;
     font-size: 55px;
+    position: relative;
 }
 
 @media screen and (max-width: 1330px) {
     .image-block__title {
         margin-top: 120px;
-        margin-left: 0;
         align-self: center;
         font-size: 50px;
     }
@@ -78,19 +78,21 @@
     font-weight: 400;
     color: #FAF0E6;
     align-self: flex-end;
-    margin-right: 60px;
+    position: absolute;
+    top: 60px;
+    right: -60px;
 }
 
 @media screen and (max-width: 1330px) {
     .image-block__subtitle {
-        margin-right: 30px;
         font-size: 25px;
+        right: -45px;
     }
 }
 
 @media screen and (max-width: 1050px) {
     .image-block__subtitle {
-        margin-right: 40px;
+        top: 45px;
         font-size: 20px;
     }
 }
