@@ -35,6 +35,12 @@
     font-size: 18px;
     width: 100%;
     margin-bottom: 30px;
+    cursor: pointer;
+    transition: opacity 0.5s ease-out;
+}
+
+.gift__button-more:hover {
+    opacity: 0.7;
 }
 
 .gift__button-order {
@@ -46,4 +52,10 @@
     font-weight: 600;
     font-size: 18px;
     width: 100%;
+    cursor: pointer;
+    transition: opacity 0.5s ease-out;
+}
+
+.gift__button-order:hover {
+    opacity: 0.7;
 }

@@ -9,6 +9,14 @@
     justify-content: center;
     align-items: center;
     display: flex;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.gift-popup_visible {
+    visibility: visible;
+    opacity: 1;
 }
 
 .gift-popup__container {
@@ -30,8 +38,8 @@
     background-color: transparent;
     border: none;
     position: absolute;
-    right: -40px;
-    top: -40px;
+    right: 20px;
+    top: 20px;
     width: 35px;
     height: 35px;
     background-repeat: no-repeat;
