@@ -4,7 +4,6 @@ import Header from "../Header/Header";
 import ScrollingLine from "../ScrollingLine/ScrollingLine";
 import Footer from "../Footer/Footer";
 import Gift from "../Gift/Gift";
-import GiftInfoPopup from "../GiftInfoPopup/GiftInfoPopup";
 
 function Catalog(props) {
     return (

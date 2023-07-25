@@ -20,68 +20,78 @@ import eskimoWhite from "../images/eskimo-white.jpeg";
 import strawberry6 from "../images/strawberry-6.jpeg";
 import strawberry20 from "../images/strawberry-20.jpeg";
 import bentoBananCaramel from "../images/bento-banan&caramel.png";
+import bentoHello30 from "../images/bento-hello-30.jpeg";
+import bentoInfinityInLove from "../images/bento-infinity-in-love.jpg";
+import bentoHeartRythm from "../images/bento-heart-rythm.jpg";
+import bentoStrawberryPremium from "../images/main-photo5.jpg";
 
 const catalogBlockArray = [
     {
-        image: bentoImage,
-        price: 1050,
+        image: bentoInfinityInLove,
+        price: 1250,
         description: 'Бенто торт',
         path: '/catalog-bento',
     },
     {
         image: setImage,
-        price: 1200,
+        price: 1250,
         description: 'Сладкие наборы',
         path: '/catalog-gifts',
     },
     {
-        image: bananaImage,
-        price: 700,
-        description: 'Бананы в шоколаде',
-        path: '/catalog-bananas',
-    },
-    {
         image: strawberryImage,
-        price: 550,
+        price: 900,
         description: 'Клубника в шоколаде',
         path: '/catalog-strawberry',
-    }
+    },
+    {
+        image: bentoImage,
+        price: 1550,
+        description: 'Бенто торт',
+        path: '/catalog-bento-premium',
+    },
 ]
 
 const catalogPageArray = [
     {
         image: allImage,
-        price: 550,
+        price: 900,
         description: 'Все подарки',
         path: '/catalog-all',
     },
     {
         image: strawberryImage,
-        price: 550,
+        price: 900,
         description: 'Клубника в шоколаде',
         path: '/catalog-strawberry',
     },
     {
-        image: bentoImage,
-        price: 1050,
+        image: bentoInfinityInLove,
+        price: 1250,
         description: 'Бенто торт',
         path: '/catalog-bento',
     },
     {
+        image: bentoImage,
+        price: 1550,
+        description: 'Бенто торт',
+        path: '/catalog-bento-premium',
+    },
+    {
         image: bananaImage,
-        price: 700,
+        price: 900,
         description: 'Бананы в шоколаде',
         path: '/catalog-bananas',
     },
     {
         image: setImage,
-        price: 1200,
+        price: 1250,
         description: 'Праздничные наборы',
         path: '/catalog-gifts',
     },
 ]
 
-const bentoArray = [
+const bentoTastesArray = [
     {
         image: bentoSnikers,
         price: 1250,
@@ -115,6 +125,92 @@ const bentoArray = [
         measureType: "Вес: ",
     },
 ];
+
+const bentoArray = [
+    {
+        image: bentoBirthday,
+        price: 1250,
+        weight: "450 - 550 грамм",
+        descriptionShort: "Бенто-торт «Happy Birthday»\n",
+        descriptionAll: "Цвет торта и надпись зависит от вашего желания. Начинка на выбор.",
+        measureType: "Вес: ",
+    },
+    {
+        image: bento14,
+        price: 1250,
+        weight: "500 грамм",
+        descriptionShort: "Бенто-торт «14 лет выдержки»\n",
+        descriptionAll: "Возраст и цвет торта зависит от вашего желания. Начинка на выбор.",
+        measureType: "Вес: ",
+    },
+    {
+        image: bentoHello,
+        price: 1250,
+        weight: "500 грамм",
+        descriptionShort: "Бенто-торт «Hello 24»\n",
+        descriptionAll: "Актуальный декор для дня рождения, цвет и возраст по вашему желанию. Начинка на выбор",
+        measureType: "Вес: ",
+    },
+    {
+        image: bentoHello30,
+        price: 1250,
+        weight: "500 грамм",
+        descriptionShort: "Бенто-торт «Hello 30»\n",
+        descriptionAll: "Актуальный декор для дня рождения, цвет и возраст по вашему желанию. Начинка на выбор",
+        measureType: "Вес: ",
+    },
+    {
+        image: bentoInfinityInLove,
+        price: 1250,
+        weight: "500 грамм",
+        descriptionShort: "Бенто-торт «Буду любить тебя вечность»\n",
+        descriptionAll: "Актуальный декор для дня рождения, цвет и возраст по вашему желанию. Начинка на выбор",
+        measureType: "Вес: ",
+    },
+    {
+        image: bentoHeartRythm,
+        price: 1250,
+        weight: "500 грамм",
+        descriptionShort: "Бенто-торт «Биение сердца»\n",
+        descriptionAll: "Актуальный декор для дня рождения, цвет и возраст по вашему желанию. Начинка на выбор",
+        measureType: "Вес: ",
+    },
+]
+
+const bentoArrayPremium = [
+    {
+        image: bentoPremium,
+        price: 1600,
+        weight: "до 600 грамм",
+        descriptionShort: "Бенто-торт «Нежность Премиум»\n",
+        descriptionAll: "Нежный декор торта с цветами из белого бельгийского шоколада. Начинка на выбор.",
+        measureType: "Вес: ",
+    },
+    {
+        image: bentoStrawberry,
+        price: 1500,
+        weight: "до 550 грамм",
+        descriptionShort: "Бенто-торт «Клубничный Люкс»\n",
+        descriptionAll: "Летний декор торта, с трендовым кремовым декором и свежей клубникой. Начинка на выбор.",
+        measureType: "Вес: ",
+    },
+    {
+        image: bentoHeart,
+        price: 1250,
+        weight: "до 550 грамм",
+        descriptionShort: "Бенто-торт «Сердце»\n",
+        descriptionAll: "Идеальный вариант для подарка любимому человеку, цвет можно заменить и добавить надпись. Начинка на выбор.",
+        measureType: "Вес: ",
+    },
+    {
+        image: bentoStrawberryPremium,
+        price: 1500,
+        weight: "до 550 грамм",
+        descriptionShort: "Бенто-торт «Клубничное лето»\n",
+        descriptionAll: "Летний декор торта, сo свежей клубникой. Начинка на выбор.",
+        measureType: "Вес: ",
+    },
+]
 
 const strawberryArray = [
     {
@@ -232,6 +328,30 @@ const allGiftsArray = [
         descriptionAll: "Идеальный вариант для подарка любимому человеку, цвет можно заменить и добавить надпись. Начинка на выбор.",
         measureType: "Вес: ",
     },
+    {
+        image: bentoHello30,
+        price: 1250,
+        weight: "500 грамм",
+        descriptionShort: "Бенто-торт «Hello 30»\n",
+        descriptionAll: "Актуальный декор для дня рождения, цвет и возраст по вашему желанию. Начинка на выбор",
+        measureType: "Вес: ",
+    },
+    {
+        image: bentoInfinityInLove,
+        price: 1250,
+        weight: "500 грамм",
+        descriptionShort: "Бенто-торт «Буду любить тебя вечность»\n",
+        descriptionAll: "Идеальный вариант для подарка любимому человеку, цвет можно заменить и добавить надпись. Начинка на выбор.",
+        measureType: "Вес: ",
+    },
+    {
+        image: bentoHeartRythm,
+        price: 1250,
+        weight: "до 550 грамм",
+        descriptionShort: "Бенто-торт «Биение сердца»\n",
+        descriptionAll: "Идеальный вариант для подарка любимому человеку, цвет можно заменить и добавить надпись. Начинка на выбор.",
+        measureType: "Вес: ",
+    },
 ];
 
 const bananasArray = [
@@ -272,4 +392,4 @@ const giftsArray = [
     },
 ];
 
-export {catalogBlockArray, catalogPageArray, bentoArray, strawberryArray, giftsArray, allGiftsArray, bananasArray};
+export {catalogBlockArray, catalogPageArray, bentoArray, strawberryArray, giftsArray, allGiftsArray, bananasArray, bentoArrayPremium};

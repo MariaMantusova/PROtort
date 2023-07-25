@@ -1,5 +1,4 @@
 .image-block {
-    background-image: url("../../images/main-photo.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -12,9 +11,9 @@
     transition: 5s;
 
     animation-name: animate;
-    animation-duration: 40s;
+    animation-duration: 20s;
     animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
+    animation-timing-function: linear;
 }
 
 @media screen and (max-width: 670px) {
@@ -111,21 +110,18 @@
 
 @keyframes animate {
     0% {
-        background-image: url("../../images/main-photo.jpg");
+        background-image: url("../../images/main-photo5.jpg");
     }
-    20% {
+    25% {
         background-image: url("../../images/main-photo1.jpg");
     }
-    40% {
+    50% {
         background-image: url("../../images/main-photo2.jpg");
     }
-    60% {
+    75% {
         background-image: url("../../images/main-photo3.jpg");
     }
-    80% {
-        background-image: url("../../images/main-photo4.jpg");
-    }
     100% {
-        background-image: url("../../images/main-photo5.jpg");
+        background-image: url("../../images/main-photo4.jpg");
     }
 }

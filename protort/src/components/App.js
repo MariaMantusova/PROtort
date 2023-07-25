@@ -1,7 +1,7 @@
 import React from "react";
 import {Route, Routes} from "react-router-dom";
 import Main from "./Main/Main";
-import {catalogBlockArray, catalogPageArray, bentoArray, strawberryArray, giftsArray, allGiftsArray, bananasArray} from "../data/data";
+import {catalogBlockArray, bentoArrayPremium, catalogPageArray, bentoArray, strawberryArray, giftsArray, allGiftsArray, bananasArray} from "../data/data";
 import CatalogPage from "./CatalogPage/CatalogPage";
 import OrderPage from "./OrderPage/OrderPage";
 import AboutUsPage from "./AboutUsPage/AboutUsPage";
@@ -16,6 +16,7 @@ function App() {
             <Route path="/catalog-strawberry" element={<Catalog title="Клубника в шоколаде" catalogArray={strawberryArray}/>}/>
             <Route path="/catalog-bananas" element={<Catalog title="Бананы в шоколаде" catalogArray={bananasArray}/>}/>
             <Route path="/catalog-bento" element={<Catalog title="Бенто торт" catalogArray={bentoArray}/>}/>
+            <Route path="/catalog-bento-premium" element={<Catalog title="Бенто торт" catalogArray={bentoArrayPremium}/>}/>
             <Route path="/catalog-gifts" element={<Catalog title="Подарочные наборы" catalogArray={giftsArray}/>}/>
             <Route path="/order" element={<OrderPage/>}/>
             <Route path="/about-us" element={<AboutUsPage/>}/>
