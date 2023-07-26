@@ -9,11 +9,7 @@
     position: relative;
     align-items: center;
     transition: 5s;
-
-    animation-name: animate;
-    animation-duration: 20s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation: animate 20s linear infinite;
 }
 
 @media screen and (max-width: 670px) {
@@ -112,14 +108,29 @@
     0% {
         background-image: url("../../images/main-photo5.jpg");
     }
-    25% {
+    20% {
+        background-image: url("../../images/main-photo5.jpg");
+    }
+    20.01% {
         background-image: url("../../images/main-photo1.jpg");
     }
-    50% {
+    40% {
+        background-image: url("../../images/main-photo1.jpg");
+    }
+    40.01% {
         background-image: url("../../images/main-photo2.jpg");
     }
-    75% {
+    60% {
+        background-image: url("../../images/main-photo2.jpg");
+    }
+    60.01% {
         background-image: url("../../images/main-photo3.jpg");
+    }
+    80% {
+        background-image: url("../../images/main-photo3.jpg");
+    }
+    80.01% {
+        background-image: url("../../images/main-photo4.jpg");
     }
     100% {
         background-image: url("../../images/main-photo4.jpg");
