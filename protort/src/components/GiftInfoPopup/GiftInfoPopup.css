@@ -73,6 +73,7 @@
     height: 35px;
     background-repeat: no-repeat;
     padding: 0;
+    cursor: pointer;
 }
 
 .gift-popup__image {
@@ -147,46 +148,5 @@
 @media screen and (max-width: 960px) {
     .gift-popup__measure {
         margin-bottom: 0;
-    }
-}
-
-.gift-popup__order-button {
-    background-color: #6F4E37;
-    border: none;
-    border-radius: 40px;
-    padding: 15px 0;
-    color: #FAF0E6;
-    font-weight: 600;
-    font-size: 18px;
-    width: 80%;
-    align-self: end;
-}
-
-@media screen and (max-width: 960px) {
-    .gift-popup__order-button {
-        position: absolute;
-        width: 320px;
-        height: 51px;
-        bottom: 35px;
-        left: 31%;
-    }
-}
-
-@media screen and (max-width: 540px) {
-    .gift-popup__order-button {
-        left: 18%;
-    }
-}
-
-@media screen and (max-width: 450px) {
-    .gift-popup__order-button {
-        left: 10%;
-    }
-}
-
-@media screen and (max-width: 390px) {
-    .gift-popup__order-button {
-        left: 12%;
-        max-width: 270px;
     }
 }

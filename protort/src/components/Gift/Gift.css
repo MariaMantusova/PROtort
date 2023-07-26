@@ -25,38 +25,3 @@
     margin-top: 10px;
     margin-bottom: 30px;
 }
-
-.gift__button-more {
-    background-color: #FAF0E6;
-    border: none;
-    border-radius: 40px;
-    padding: 15px 0;
-    font-weight: 600;
-    font-size: 18px;
-    width: 100%;
-    margin-bottom: 30px;
-    cursor: pointer;
-    transition: opacity 0.5s ease-out;
-    color: #6f4e37;
-}
-
-.gift__button-more:hover {
-    opacity: 0.7;
-}
-
-.gift__button-order {
-    background-color: #6F4E37;
-    border: none;
-    border-radius: 40px;
-    padding: 15px 0;
-    color: #FAF0E6;
-    font-weight: 600;
-    font-size: 18px;
-    width: 100%;
-    cursor: pointer;
-    transition: opacity 0.5s ease-out;
-}
-
-.gift__button-order:hover {
-    opacity: 0.7;
-}

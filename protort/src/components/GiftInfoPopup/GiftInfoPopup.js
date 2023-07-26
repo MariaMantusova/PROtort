@@ -1,5 +1,6 @@
 import React from "react";
 import "./GiftInfoPopup.css";
+import CardButton from "../CardButton/CardButton";
 
 function GiftInfoPopup(props) {
     return(
@@ -11,7 +12,7 @@ function GiftInfoPopup(props) {
                     <h2 className="gift-popup__title">{props.gift.descriptionShort}</h2>
                     <p className="gift-popup__text">Описание: {props.gift.descriptionAll}</p>
                     <p className="gift-popup__measure">{props.gift.measureType}{props.gift.weight || props.gift.count}</p>
-                    <button className="gift-popup__order-button">Заказать</button>
+                    <CardButton class="gift-popup__order-button" text="Заказать"/>
                 </div>
             </div>
         </section>

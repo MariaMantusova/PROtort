@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import "./Gift.css";
 import GiftInfoPopup from "../GiftInfoPopup/GiftInfoPopup";
+import CardButton from "../CardButton/CardButton";
 
 function Gift(props) {
 
@@ -22,8 +23,8 @@ function Gift(props) {
                 <img className="gift__image" src={props.catalogItem.image} alt={props.catalogItem.descriptionShort}/>
                 <p className="gift__description">{props.catalogItem.descriptionShort}</p>
                 <p className="gift__price">{props.catalogItem.price} &#8381;</p>
-                <button className="gift__button-more" onClick={openInfoPopup}>Подробнее</button>
-                <button className="gift__button-order">Заказать</button>
+                <CardButton class="gift__button-more" text="Подробнее" onClick={openInfoPopup}/>
+                <CardButton class="gift__button-order" text="Заказать"/>
             </li>
             <GiftInfoPopup gift={gift} class={open && "gift-popup_visible"} onClose={closeInfoPopup}/>
         </>
