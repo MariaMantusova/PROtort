@@ -73,6 +73,12 @@
     }
 }
 
+@media screen and (max-width: 450px) {
+    .image-block__title {
+        display: none;
+    }
+}
+
 .image-block__subtitle {
     margin-top: 0;
     margin-bottom: 0;
