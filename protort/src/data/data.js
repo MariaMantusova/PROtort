@@ -33,6 +33,12 @@ const catalogBlockArray = [
         path: '/catalog-bento',
     },
     {
+        image: bentoImage,
+        price: 1550,
+        description: 'Бенто торт',
+        path: '/catalog-bento-premium',
+    },
+    {
         image: setImage,
         price: 1250,
         description: 'Сладкие наборы',
@@ -43,12 +49,6 @@ const catalogBlockArray = [
         price: 900,
         description: 'Клубника в шоколаде',
         path: '/catalog-strawberry',
-    },
-    {
-        image: bentoImage,
-        price: 1550,
-        description: 'Бенто торт',
-        path: '/catalog-bento-premium',
     },
 ]
 
