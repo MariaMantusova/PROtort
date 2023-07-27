@@ -1,4 +1,3 @@
-import React from "react";
 import bentoImage from "../images/bento-catalog.jpg";
 import strawberryImage from "../images/strawberry-catalog.jpg";
 import bananaImage from "../images/banana-catalog.jpeg";
