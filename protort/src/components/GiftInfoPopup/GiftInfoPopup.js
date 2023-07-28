@@ -12,7 +12,7 @@ function GiftInfoPopup(props) {
                     <h2 className="gift-popup__title">{props.gift.descriptionShort}</h2>
                     <p className="gift-popup__text">Описание: {props.gift.descriptionAll}</p>
                     <p className="gift-popup__measure">{props.gift.measureType}{props.gift.weight || props.gift.count}</p>
-                    <CardButton class="gift-popup__order-button" text="Заказать"/>
+                    <CardButton class="gift-popup__order-button" text="Заказать" onClick={props.onClick}/>
                 </div>
             </div>
         </section>

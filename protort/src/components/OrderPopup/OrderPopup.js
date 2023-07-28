@@ -6,17 +6,28 @@ import whatsappIcon from "../../images/whatsapp.svg";
 import CardButton from "../CardButton/CardButton";
 
 function OrderPopup(props) {
+
+    function handleChangeName(evt) {
+        props.setName(evt.target.value);
+        props.generateMessage();
+    }
+
+    function handleChangePhone(evt) {
+        props.setPhone(evt.target.value)
+        props.generateMessage();
+    }
+
     return (
         <div className={`order-popup ${props.class}`}>
             <section className="order-popup__container">
                 <button className="order-popup__close-button" onClick={props.onCLose}></button>
                 <h2 className="order-popup__title">Оставьте свои данные и наш кондитер свяжется с вами</h2>
-                <form className="order-popup__form">
+                <form className="order-popup__form" onSubmit={props.onSubmit}>
                     <label htmlFor="name" className="order-popup__label">Имя</label>
                     <input type="text" className="order-popup__input" minLength="2" maxLength="30" name="name"
-                           placeholder="Марина" required/>
+                           placeholder="Марина" onChange={handleChangeName} value={props.name || ""} required/>
                     <label htmlFor="phoneNumber" className="order-popup__label">Номер телефона</label>
-                    <input type="tel" className="order-popup__input" name="phoneNumber" placeholder="+7 949 123 45 67"
+                    <input type="tel" className="order-popup__input" name="phoneNumber" value={props.phone || ""} onChange={handleChangePhone} placeholder="+7 949 123 45 67"
                            required/>
                     <div className="order-checkbox__container">
                         <h2 className="order-checkbox__title">Выберите удобный тип связи:</h2>

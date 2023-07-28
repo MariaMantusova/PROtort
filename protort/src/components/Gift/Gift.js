@@ -11,6 +11,8 @@ function Gift(props) {
     const [openOrder, setOpenOrder] = useState(false);
     const [gift, setGift] = useState({});
     const [message, setMessage] = useState("");
+    const [customerName, setCustomerName] = useState("");
+    const [customerPhone, setCustomerPhone] = useState("");
 
     function openInfoPopup() {
         setOpenInfo(true);
@@ -21,13 +23,15 @@ function Gift(props) {
         setOpenOrder(true);
     }
 
-    function closePopup() {
+    function closeInfoPopup() {
         setOpenInfo(false);
+    }
+
+    function closeOrderPopup() {
         setOpenOrder(false);
     }
 
     function sendingOrderToTg() {
-        generateMessage(props.catalogItem, "+79164659510", "Мария")
         telegramApi.sendOrder(message)
             .then((res) => {
                     // setMessage("")
@@ -37,14 +41,19 @@ function Gift(props) {
             })
     }
 
-    function generateMessage(gift, phoneNumber, name) {
+    function generateMessage() {
         setMessage(
-            `Марина! Тебе пришел заказ. 
+            `Марина! Тебе пришел заказ.
                    Данные по заказу:
-                   1. Номер телефона заказчика: ${phoneNumber},
-                   2. Имя заказчика: ${name},
-                   3. Хотят заказть: ${gift.descriptionShort}`
+                   1. Номер телефона заказчика: ${customerPhone},
+                   2. Имя заказчика: ${customerName},
+                   3. Хотят заказть: ${props.catalogItem.descriptionShort}`
         )
+    }
+
+    function sendingOrderInfo(evt) {
+        evt.preventDefault();
+        sendingOrderToTg();
     }
 
     return (
@@ -56,8 +65,8 @@ function Gift(props) {
                 <CardButton class="gift__button-more" text="Подробнее" onClick={openInfoPopup}/>
                 <CardButton class="gift__button-order" text="Заказать" onClick={openOrderPopup}/>
             </li>
-            <GiftInfoPopup gift={gift} class={openInfo && "gift-popup_visible"} onClose={closePopup}/>
-            <OrderPopup class={openOrder && "order-popup_visible"} onCLose={closePopup}/>
+            <GiftInfoPopup gift={gift} class={openInfo && "gift-popup_visible"} onClick={openOrderPopup} onClose={closeInfoPopup}/>
+            <OrderPopup class={openOrder && "order-popup_visible"} generateMessage={generateMessage} onSubmit={sendingOrderInfo} name={customerName} phone={customerPhone} setName={setCustomerName} setPhone={setCustomerPhone} onCLose={closeOrderPopup}/>
         </>
     )
 }
