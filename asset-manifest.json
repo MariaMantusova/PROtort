@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/PROtort/static/css/main.ad1f450c.css",
-    "main.js": "/PROtort/static/js/main.85285343.js",
+    "main.js": "/PROtort/static/js/main.0bcfc4ae.js",
     "static/js/787.7ab0eea7.chunk.js": "/PROtort/static/js/787.7ab0eea7.chunk.js",
     "static/media/bento-heart.jpg": "/PROtort/static/media/bento-heart.8c9f6d8697cff01271b2.jpg",
     "static/media/strawberry-catalog.jpg": "/PROtort/static/media/strawberry-catalog.85abba28d3944e5a6023.jpg",
@@ -40,11 +40,11 @@
     "static/media/instagram.svg": "/PROtort/static/media/instagram.859b848b2ed1f28e19a6ade5f0fcf81a.svg",
     "index.html": "/PROtort/index.html",
     "main.ad1f450c.css.map": "/PROtort/static/css/main.ad1f450c.css.map",
-    "main.85285343.js.map": "/PROtort/static/js/main.85285343.js.map",
+    "main.0bcfc4ae.js.map": "/PROtort/static/js/main.0bcfc4ae.js.map",
     "787.7ab0eea7.chunk.js.map": "/PROtort/static/js/787.7ab0eea7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ad1f450c.css",
-    "static/js/main.85285343.js"
+    "static/js/main.0bcfc4ae.js"
   ]
 }
