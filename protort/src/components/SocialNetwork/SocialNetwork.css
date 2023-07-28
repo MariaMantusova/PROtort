@@ -72,3 +72,13 @@
         max-width: 75px;
     }
 }
+
+.social-network__popup {
+    max-height: 100px;
+    max-width: 100px;
+}
+
+.social-network__icon-popup {
+    max-width: 70px;
+    max-height: 50px;
+}

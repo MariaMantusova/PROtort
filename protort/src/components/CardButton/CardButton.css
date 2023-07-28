@@ -61,3 +61,11 @@
         max-width: 270px;
     }
 }
+
+.order-checkbox__button {
+    background-color: #6F4E37;
+    padding: 10px 0;
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 15px;
+}

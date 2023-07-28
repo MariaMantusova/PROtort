@@ -6,7 +6,7 @@ function SocialNetwork(props) {
         <li className="social-networks__item">
             <a className={`social-network ${props.class}`} href={props.href} target="_blank" rel="noreferrer"
             >
-                <img className="social-network__icon" src={props.icon} alt={props.alt}/>
+                <img className={`social-network__icon ${props.iconClass}`} src={props.icon} alt={props.alt}/>
             </a>
             {props.children}
         </li>

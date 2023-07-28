@@ -24,7 +24,9 @@ function OrderPage() {
                 <h3 className="order__text-span">или</h3>
                 <h2 className="order__text">Оставьте свой номер и наш кондитер сам свяжется с вами</h2>
                 <form className="order__form">
-                    <input className="order__input" type="tel" placeholder="+7 949 409 56 56"/>
+                    <label className="order__label">
+                        <input className="order__input" type="tel" placeholder="+7 949 409 56 56" required/>
+                    </label>
                 </form>
             </section>
             <Footer/>

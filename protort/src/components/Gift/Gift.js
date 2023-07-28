@@ -3,20 +3,27 @@ import "./Gift.css";
 import GiftInfoPopup from "../GiftInfoPopup/GiftInfoPopup";
 import CardButton from "../CardButton/CardButton";
 import {telegramApi} from "../../utils/TelegramApi";
+import OrderPopup from "../OrderPopup/OrderPopup";
 
 function Gift(props) {
 
-    const [open, setOpen] = useState(false);
+    const [openInfo, setOpenInfo] = useState(false);
+    const [openOrder, setOpenOrder] = useState(false);
     const [gift, setGift] = useState({});
     const [message, setMessage] = useState("");
 
     function openInfoPopup() {
-        setOpen(true);
+        setOpenInfo(true);
         setGift(props.catalogItem);
     }
 
-    function closeInfoPopup() {
-        setOpen(false)
+    function openOrderPopup() {
+        setOpenOrder(true);
+    }
+
+    function closePopup() {
+        setOpenInfo(false);
+        setOpenOrder(false);
     }
 
     function sendingOrderToTg() {
@@ -47,9 +54,10 @@ function Gift(props) {
                 <p className="gift__description">{props.catalogItem.descriptionShort}</p>
                 <p className="gift__price">{props.catalogItem.price} &#8381;</p>
                 <CardButton class="gift__button-more" text="Подробнее" onClick={openInfoPopup}/>
-                <CardButton class="gift__button-order" text="Заказать" onClick={sendingOrderToTg}/>
+                <CardButton class="gift__button-order" text="Заказать" onClick={openOrderPopup}/>
             </li>
-            <GiftInfoPopup gift={gift} class={open && "gift-popup_visible"} onClose={closeInfoPopup}/>
+            <GiftInfoPopup gift={gift} class={openInfo && "gift-popup_visible"} onClose={closePopup}/>
+            <OrderPopup class={openOrder && "order-popup_visible"} onCLose={closePopup}/>
         </>
     )
 }
