@@ -13,6 +13,7 @@ function Gift(props) {
     const [message, setMessage] = useState("");
     const [customerName, setCustomerName] = useState("");
     const [customerPhone, setCustomerPhone] = useState("");
+    const [connectionType, setConnectionType] = useState("");
 
     function openInfoPopup() {
         setOpenInfo(true);
@@ -47,7 +48,8 @@ function Gift(props) {
                    Данные по заказу:
                    1. Номер телефона заказчика: ${customerPhone},
                    2. Имя заказчика: ${customerName},
-                   3. Хотят заказть: ${props.catalogItem.descriptionShort}`
+                   3. Хотят заказть: ${props.catalogItem.descriptionShort},
+                   4. Связаться через: ${connectionType}`
         )
     }
 
@@ -65,8 +67,12 @@ function Gift(props) {
                 <CardButton class="gift__button-more" text="Подробнее" onClick={openInfoPopup}/>
                 <CardButton class="gift__button-order" text="Заказать" onClick={openOrderPopup}/>
             </li>
-            <GiftInfoPopup gift={gift} class={openInfo && "gift-popup_visible"} onClick={openOrderPopup} onClose={closeInfoPopup}/>
-            <OrderPopup class={openOrder && "order-popup_visible"} generateMessage={generateMessage} onSubmit={sendingOrderInfo} name={customerName} phone={customerPhone} setName={setCustomerName} setPhone={setCustomerPhone} onCLose={closeOrderPopup}/>
+            <GiftInfoPopup gift={gift} class={openInfo && "gift-popup_visible"} onClick={openOrderPopup}
+                           onClose={closeInfoPopup}/>
+            <OrderPopup class={openOrder && "order-popup_visible"} generateMessage={generateMessage}
+                        onSubmit={sendingOrderInfo} name={customerName} phone={customerPhone} setName={setCustomerName}
+                        setPhone={setCustomerPhone} connectionType={connectionType}
+                        setConnectionType={setConnectionType} onCLose={closeOrderPopup}/>
         </>
     )
 }

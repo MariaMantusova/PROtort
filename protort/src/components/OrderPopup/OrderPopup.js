@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import "./OrderPopup.css";
 import SocialNetwork from "../SocialNetwork/SocialNetwork";
 import telegramIcon from "../../images/telegramm.svg";
@@ -6,6 +6,10 @@ import whatsappIcon from "../../images/whatsapp.svg";
 import CardButton from "../CardButton/CardButton";
 
 function OrderPopup(props) {
+    const [isCheckedTelegram, setIsCheckedTelegram] = useState(true);
+    const [isCheckedWhatsApp, setIsCheckedWhatsApp] = useState(false);
+    const [isCheckedCall, setIsCheckedCall] = useState(false);
+    const [isCheckedAll, setIsCheckedAll] = useState(false);
 
     function handleChangeName(evt) {
         props.setName(evt.target.value);
@@ -15,6 +19,22 @@ function OrderPopup(props) {
     function handleChangePhone(evt) {
         props.setPhone(evt.target.value)
         props.generateMessage();
+    }
+
+    function handleClickCheckboxTelegram() {
+        setIsCheckedTelegram(!isCheckedTelegram);
+    }
+
+    function handleClickCheckboxWhatsApp() {
+        setIsCheckedWhatsApp(!isCheckedWhatsApp);
+    }
+
+    function handleClickCheckboxCall() {
+        setIsCheckedCall(!isCheckedCall);
+    }
+
+    function handleClickCheckboxAll() {
+        setIsCheckedAll(!isCheckedAll);
     }
 
     return (
@@ -27,21 +47,26 @@ function OrderPopup(props) {
                     <input type="text" className="order-popup__input" minLength="2" maxLength="30" name="name"
                            placeholder="Марина" onChange={handleChangeName} value={props.name || ""} required/>
                     <label htmlFor="phoneNumber" className="order-popup__label">Номер телефона</label>
-                    <input type="tel" className="order-popup__input" name="phoneNumber" value={props.phone || ""} onChange={handleChangePhone} placeholder="+7 949 123 45 67"
+                    <input type="tel" className="order-popup__input" name="phoneNumber" value={props.phone || ""}
+                           onChange={handleChangePhone} placeholder="+7 949 123 45 67"
                            required/>
                     <div className="order-checkbox__container">
                         <h2 className="order-checkbox__title">Выберите удобный тип связи:</h2>
                         <label htmlFor="Telegram" className="order-popup__label-checkbox">
-                            <input type="checkbox" className="order-popup__checkbox" name="Telegram" defaultChecked/>
+                            <input type="checkbox" className="order-popup__checkbox" id="Telegram" name="accessType"
+                                   value="Telegram" onClick={handleClickCheckboxTelegram} defaultChecked required={!(isCheckedTelegram || isCheckedAll || isCheckedCall || isCheckedWhatsApp)}/>
                             Telegram</label>
                         <label htmlFor="WhatsApp" className="order-popup__label-checkbox">
-                            <input type="checkbox" className="order-popup__checkbox" name="WhatsApp"/>
+                            <input type="checkbox" className="order-popup__checkbox" id="WhatsApp" name="accessType"
+                                   value="WhatsApp" onClick={handleClickCheckboxWhatsApp} required={!(isCheckedTelegram || isCheckedAll || isCheckedCall || isCheckedWhatsApp)}/>
                             WhatsApp</label>
                         <label htmlFor="Call" className="order-popup__label-checkbox">
-                            <input type="checkbox" className="order-popup__checkbox" name="Call"/>
+                            <input type="checkbox" className="order-popup__checkbox" id="Call" name="accessType"
+                                   value="Call" onClick={handleClickCheckboxCall} required={!(isCheckedTelegram || isCheckedAll || isCheckedCall || isCheckedWhatsApp)}/>
                             Обычный звонок</label>
                         <label htmlFor="All" className="order-popup__label-checkbox">
-                            <input type="checkbox" className="order-popup__checkbox" name="All"/>
+                            <input type="checkbox" className="order-popup__checkbox" id="All" name="accessType"
+                                   value="All" onClick={handleClickCheckboxAll} required={!(isCheckedTelegram || isCheckedAll || isCheckedCall || isCheckedWhatsApp)}/>
                             Подойдет любой вариант</label>
                     </div>
                     <CardButton class="order-checkbox__button" text="Отправить заявку"/>
@@ -49,9 +74,12 @@ function OrderPopup(props) {
                 <span className="order-popup__span">или</span>
                 <p className="order-popup__text">Перейдите в удобный мессенджер для оформления заказа</p>
                 <div className="order-social-network__container">
-                    <SocialNetwork class="social-network__brown social-network__popup" iconClass="social-network__icon-popup" href="https://t.me/marina_pro_tort" icon={telegramIcon}
+                    <SocialNetwork class="social-network__brown social-network__popup"
+                                   iconClass="social-network__icon-popup" href="https://t.me/marina_pro_tort"
+                                   icon={telegramIcon}
                                    alt="телеграм ссылка и лого"/>
-                    <SocialNetwork class="social-network__brown social-network__popup" iconClass="social-network__icon-popup" href="#" icon={whatsappIcon}
+                    <SocialNetwork class="social-network__brown social-network__popup"
+                                   iconClass="social-network__icon-popup" href="#" icon={whatsappIcon}
                                    alt="вотсапп ссылка и лого"/>
                 </div>
             </section>
