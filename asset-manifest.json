@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/PROtort/static/css/main.ad1f450c.css",
-    "main.js": "/PROtort/static/js/main.0bcfc4ae.js",
+    "main.css": "/PROtort/static/css/main.e1a1dbad.css",
+    "main.js": "/PROtort/static/js/main.2f7d65ff.js",
     "static/js/787.7ab0eea7.chunk.js": "/PROtort/static/js/787.7ab0eea7.chunk.js",
     "static/media/bento-heart.jpg": "/PROtort/static/media/bento-heart.8c9f6d8697cff01271b2.jpg",
     "static/media/strawberry-catalog.jpg": "/PROtort/static/media/strawberry-catalog.85abba28d3944e5a6023.jpg",
@@ -38,13 +38,14 @@
     "static/media/telegramm.svg": "/PROtort/static/media/telegramm.69d2fd6b353d2209ce3f373ccce6dbd8.svg",
     "static/media/vk.svg": "/PROtort/static/media/vk.110fac012633ceef7b99aaf7eb5277e5.svg",
     "static/media/instagram.svg": "/PROtort/static/media/instagram.859b848b2ed1f28e19a6ade5f0fcf81a.svg",
+    "static/media/header-logo.svg": "/PROtort/static/media/header-logo.841265ab315f068b84c2.svg",
     "index.html": "/PROtort/index.html",
-    "main.ad1f450c.css.map": "/PROtort/static/css/main.ad1f450c.css.map",
-    "main.0bcfc4ae.js.map": "/PROtort/static/js/main.0bcfc4ae.js.map",
+    "main.e1a1dbad.css.map": "/PROtort/static/css/main.e1a1dbad.css.map",
+    "main.2f7d65ff.js.map": "/PROtort/static/js/main.2f7d65ff.js.map",
     "787.7ab0eea7.chunk.js.map": "/PROtort/static/js/787.7ab0eea7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ad1f450c.css",
-    "static/js/main.0bcfc4ae.js"
+    "static/css/main.e1a1dbad.css",
+    "static/js/main.2f7d65ff.js"
   ]
 }
