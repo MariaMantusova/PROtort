@@ -99,10 +99,10 @@ function OrderPopup(props) {
                 <form className="order-popup__form" onSubmit={props.onSubmit}>
                     <label htmlFor="name" className="order-popup__label">Имя</label>
                     <input type="text" className="order-popup__input" minLength="2" maxLength="30" name="name"
-                           placeholder="Марина" onChange={handleChangeName} value={props.name || ""} required/>
+                           placeholder="Марина" pattern="^[A-Za-zа-яА-ЯЁё]+$" onChange={handleChangeName} value={props.name || ""} required/>
                     <label htmlFor="phoneNumber" className="order-popup__label">Номер телефона</label>
                     <input type="tel" className="order-popup__input" name="phoneNumber" value={props.phone || ""}
-                           onChange={handleChangePhone} placeholder="+7 949 123 45 67"
+                           onChange={handleChangePhone} pattern="^\+7[0-9]{3}[0-9]{7}$" placeholder="+7 949 123 45 67"
                            required/>
                     <div className="order-checkbox__container">
                         <h2 className="order-checkbox__title">Выберите удобный тип связи:</h2>
