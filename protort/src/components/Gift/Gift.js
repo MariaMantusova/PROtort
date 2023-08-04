@@ -6,14 +6,12 @@ import {telegramApi} from "../../utils/TelegramApi";
 import OrderPopup from "../OrderPopup/OrderPopup";
 
 function Gift(props) {
-
     const [openInfo, setOpenInfo] = useState(false);
     const [openOrder, setOpenOrder] = useState(false);
     const [gift, setGift] = useState({});
     const [message, setMessage] = useState("");
     const [customerName, setCustomerName] = useState("");
     const [customerPhone, setCustomerPhone] = useState("");
-    const [connectionType, setConnectionType] = useState("");
 
     function openInfoPopup() {
         setOpenInfo(true);
@@ -35,14 +33,13 @@ function Gift(props) {
     function sendingOrderToTg() {
         telegramApi.sendOrder(message)
             .then((res) => {
-                    // setMessage("")
             })
             .catch((err) => {
                 console.log(err)
             })
     }
 
-    function generateMessage() {
+    function generateMessage(connectionType) {
         setMessage(
             `Марина! Тебе пришел заказ.
                    Данные по заказу:
@@ -71,8 +68,7 @@ function Gift(props) {
                            onClose={closeInfoPopup}/>
             <OrderPopup class={openOrder && "order-popup_visible"} generateMessage={generateMessage}
                         onSubmit={sendingOrderInfo} name={customerName} phone={customerPhone} setName={setCustomerName}
-                        setPhone={setCustomerPhone} connectionType={connectionType}
-                        setConnectionType={setConnectionType} onCLose={closeOrderPopup}/>
+                        setPhone={setCustomerPhone}  onCLose={closeOrderPopup}/>
         </>
     )
 }

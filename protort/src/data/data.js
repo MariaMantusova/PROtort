@@ -257,7 +257,7 @@ const allGiftsArray = [
     },
     {
         image: eskimo4,
-        price: 1250,
+        price: 1550,
         weight: "до 500 грамм",
         descriptionShort: "Набор «Эскимо в шоколаде»\n",
         descriptionAll: "Всем знакомая, из детства - «Картошка», покрытая молочным бельгийским шоколадом",
@@ -265,7 +265,7 @@ const allGiftsArray = [
     },
     {
         image: eskimoWhite,
-        price: 1250,
+        price: 1550,
         weight: "до 550 грамм",
         descriptionShort: "Набор «Эскимо в белом шоколаде»\n",
         descriptionAll: "Всем знакомая, из детства - «Картошка», покрытая белым бельгийским шоколадом",
@@ -273,7 +273,7 @@ const allGiftsArray = [
     },
     {
         image: cakePopsGift,
-        price: 1250,
+        price: 1550,
         weight: "до 550 грамм",
         descriptionShort: "Набор «Подарочный»\n",
         descriptionAll: "Всем знакомая, из детства - «Картошка», покрытая белым бельгийским шоколадом и нежные бананы в молочном бельгийском шоколаде",
@@ -367,7 +367,7 @@ const bananasArray = [
 const giftsArray = [
     {
         image: eskimo4,
-        price: 1250,
+        price: 1550,
         weight: "до 500 грамм",
         descriptionShort: "Набор «Эскимо в шоколаде»\n",
         descriptionAll: "Всем знакомая, из детства - «Картошка», покрытая молочным бельгийским шоколадом",
@@ -375,7 +375,7 @@ const giftsArray = [
     },
     {
         image: eskimoWhite,
-        price: 1250,
+        price: 1550,
         weight: "до 550 грамм",
         descriptionShort: "Набор «Эскимо в белом шоколаде»\n",
         descriptionAll: "Всем знакомая, из детства - «Картошка», покрытая белым бельгийским шоколадом",
@@ -383,7 +383,7 @@ const giftsArray = [
     },
     {
         image: cakePopsGift,
-        price: 1250,
+        price: 1550,
         weight: "до 550 грамм",
         descriptionShort: "Набор «Подарочный»\n",
         descriptionAll: "Всем знакомая, из детства - «Картошка», покрытая белым бельгийским шоколадом и нежные бананы в молочном бельгийском шоколаде",
