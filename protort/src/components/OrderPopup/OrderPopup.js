@@ -47,12 +47,12 @@ function OrderPopup(props) {
     }, [isCheckedTelegram, isCheckedWhatsApp, isCheckedCall, isCheckedAll])
 
     function handleChangeName(evt) {
-        props.setName(evt.target.value);
+        props.onNameChange(evt);
         props.generateMessage();
     }
 
     function handleChangePhone(evt) {
-        props.setPhone(evt.target.value)
+        props.onPhoneChange(evt);
         props.generateMessage();
     }
 
@@ -98,29 +98,49 @@ function OrderPopup(props) {
                 <h2 className="order-popup__title">Оставьте свои данные и наш кондитер свяжется с вами</h2>
                 <form className="order-popup__form" onSubmit={props.onSubmit}>
                     <label htmlFor="name" className="order-popup__label">Имя</label>
-                    <input type="text" className="order-popup__input" minLength="2" maxLength="30" name="name"
-                           placeholder="Марина" pattern="^[A-Za-zа-яА-ЯЁё]+$" onChange={handleChangeName} value={props.name || ""} required/>
+                    <input type="text" onBlur={props.onNameBlur} className="order-popup__input" minLength="2"
+                           maxLength="30" name="name"
+                           placeholder="Марина" pattern="^[A-Za-zа-яА-ЯЁё]+$" onChange={handleChangeName}
+                           value={props.name || ""} required/>
+                    {(props.nameDirty && props.nameIsEmpty) &&
+                    <span className="order-popup__input-error">Поле не может быть пустым.</span>}
+                    {(props.nameDirty && props.nameError && !props.nameIsEmpty) &&
+                    <span className="order-popup__input-error">Данное имя нельзя использовать.</span>}
                     <label htmlFor="phoneNumber" className="order-popup__label">Номер телефона</label>
-                    <input type="tel" className="order-popup__input" name="phoneNumber" value={props.phone || ""}
+                    <input type="tel" onBlur={props.onPhoneBlur} className="order-popup__input" name="phoneNumber"
+                           value={props.phone || ""}
                            onChange={handleChangePhone} pattern="^\+7[0-9]{3}[0-9]{7}$" placeholder="+7 949 123 45 67"
                            required/>
+                    {(props.phoneDirty && props.phoneIsEmpty) &&
+                    <span className="order-popup__input-error">Поле не может быть пустым.</span>}
+                    {(props.phoneDirty && props.phoneError && !props.phoneIsEmpty) &&
+                    <span className="order-popup__input-error">Введен некорректный номер телефона.</span>}
                     <div className="order-checkbox__container">
                         <h2 className="order-checkbox__title">Выберите удобный тип связи:</h2>
+                        {(!isCheckedTelegram && !isCheckedAll && !isCheckedCall && !isCheckedWhatsApp) &&
+                        <span className="order-popup__checkbox-error">Выберите минимум 1 тип связи.</span>}
                         <label htmlFor="Telegram" className="order-popup__label-checkbox">
                             <input type="checkbox" className="order-popup__checkbox" id="Telegram" name="accessType"
-                                   disabled={isCheckedAll} value="Telegram" onChange={handleChangeCheckboxTelegram} checked={isCheckedTelegram} required={!(isCheckedTelegram || isCheckedAll || isCheckedCall || isCheckedWhatsApp)}/>
+                                   disabled={isCheckedAll} value="Telegram" onChange={handleChangeCheckboxTelegram}
+                                   checked={isCheckedTelegram}
+                                   required={!(isCheckedTelegram || isCheckedAll || isCheckedCall || isCheckedWhatsApp)}/>
                             Telegram</label>
                         <label htmlFor="WhatsApp" className="order-popup__label-checkbox">
                             <input type="checkbox" className="order-popup__checkbox" id="WhatsApp" name="accessType"
-                                   disabled={isCheckedAll} value="WhatsApp" onChange={handleChangeCheckboxWhatsapp} checked={isCheckedWhatsApp} required={!(isCheckedTelegram || isCheckedAll || isCheckedCall || isCheckedWhatsApp)}/>
+                                   disabled={isCheckedAll} value="WhatsApp" onChange={handleChangeCheckboxWhatsapp}
+                                   checked={isCheckedWhatsApp}
+                                   required={!(isCheckedTelegram || isCheckedAll || isCheckedCall || isCheckedWhatsApp)}/>
                             WhatsApp</label>
                         <label htmlFor="Call" className="order-popup__label-checkbox">
                             <input type="checkbox" className="order-popup__checkbox" id="Call" name="accessType"
-                                   disabled={isCheckedAll} value="Call" onChange={handleChangeCheckboxCall} checked={isCheckedCall} required={!(isCheckedTelegram || isCheckedAll || isCheckedCall || isCheckedWhatsApp)}/>
+                                   disabled={isCheckedAll} value="Call" onChange={handleChangeCheckboxCall}
+                                   checked={isCheckedCall}
+                                   required={!(isCheckedTelegram || isCheckedAll || isCheckedCall || isCheckedWhatsApp)}/>
                             Обычный звонок</label>
                         <label htmlFor="All" className="order-popup__label-checkbox">
                             <input type="checkbox" className="order-popup__checkbox" id="All" name="accessType"
-                                   value="All" onChange={handleChangeCheckboxAll} checked={isCheckedAll} required={!(isCheckedTelegram || isCheckedAll || isCheckedCall || isCheckedWhatsApp)}/>
+                                   value="All" onChange={handleChangeCheckboxAll} checked={isCheckedAll}
+                                   required={!(isCheckedTelegram || isCheckedAll || isCheckedCall || isCheckedWhatsApp)}/>
                             Подойдет любой вариант</label>
                     </div>
                     <CardButton class="order-checkbox__button" text="Отправить заявку"/>
