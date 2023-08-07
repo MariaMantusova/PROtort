@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/PROtort/static/css/main.e1a1dbad.css",
-    "main.js": "/PROtort/static/js/main.2f7d65ff.js",
+    "main.css": "/PROtort/static/css/main.f6635c0a.css",
+    "main.js": "/PROtort/static/js/main.5235f9f7.js",
     "static/js/787.7ab0eea7.chunk.js": "/PROtort/static/js/787.7ab0eea7.chunk.js",
     "static/media/bento-heart.jpg": "/PROtort/static/media/bento-heart.8c9f6d8697cff01271b2.jpg",
     "static/media/strawberry-catalog.jpg": "/PROtort/static/media/strawberry-catalog.85abba28d3944e5a6023.jpg",
@@ -40,12 +40,12 @@
     "static/media/instagram.svg": "/PROtort/static/media/instagram.859b848b2ed1f28e19a6ade5f0fcf81a.svg",
     "static/media/header-logo.svg": "/PROtort/static/media/header-logo.841265ab315f068b84c2.svg",
     "index.html": "/PROtort/index.html",
-    "main.e1a1dbad.css.map": "/PROtort/static/css/main.e1a1dbad.css.map",
-    "main.2f7d65ff.js.map": "/PROtort/static/js/main.2f7d65ff.js.map",
+    "main.f6635c0a.css.map": "/PROtort/static/css/main.f6635c0a.css.map",
+    "main.5235f9f7.js.map": "/PROtort/static/js/main.5235f9f7.js.map",
     "787.7ab0eea7.chunk.js.map": "/PROtort/static/js/787.7ab0eea7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e1a1dbad.css",
-    "static/js/main.2f7d65ff.js"
+    "static/css/main.f6635c0a.css",
+    "static/js/main.5235f9f7.js"
   ]
 }
