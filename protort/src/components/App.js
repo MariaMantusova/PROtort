@@ -23,6 +23,10 @@ function App() {
 
     function closeOrderPopup() {
         setOpenOrder(false);
+        name.setIsDirty(false)
+        name.setValue("");
+        telephone.setValue("");
+        telephone.setIsDirty(false);
     }
 
     function sendingOrderToTg(message) {
@@ -56,20 +60,54 @@ function App() {
                                      setOpenInfo={setOpenInfo} openOrder={openOrder} setOpenOrder={setOpenOrder}
                                      closeInfoPopup={closeInfoPopup} closeOrderPopup={closeOrderPopup}
                                      sendingOrderInfo={sendingOrderInfo}
-                                     closeOrderInfoPopup={closeOrderInfoPopup} openInfoOrderSuccess={openInfoOrderSuccess}
+                                     closeOrderInfoPopup={closeOrderInfoPopup}
+                                     openInfoOrderSuccess={openInfoOrderSuccess}
                                      openInfoOrderFail={openInfoOrderFail}
                                      catalogArray={allGiftsArray}/>}/>
             <Route path="/catalog-strawberry"
-                   element={<Catalog title="Клубника в шоколаде" name={name} phone={telephone}
+                   element={<Catalog title="Клубника в шоколаде" name={name} phone={telephone} openInfo={openInfo}
+                                     setOpenInfo={setOpenInfo} openOrder={openOrder} setOpenOrder={setOpenOrder}
+                                     closeInfoPopup={closeInfoPopup} closeOrderPopup={closeOrderPopup}
+                                     sendingOrderInfo={sendingOrderInfo}
+                                     closeOrderInfoPopup={closeOrderInfoPopup}
+                                     openInfoOrderSuccess={openInfoOrderSuccess}
+                                     openInfoOrderFail={openInfoOrderFail}
                                      catalogArray={strawberryArray}/>}/>
-            <Route path="/catalog-bananas" element={<Catalog title="Бананы в шоколаде" name={name} phone={telephone}
-                                                             catalogArray={bananasArray}/>}/>
+            <Route path="/catalog-bananas"
+                   element={<Catalog title="Бананы в шоколаде" name={name} phone={telephone} openInfo={openInfo}
+                                     setOpenInfo={setOpenInfo} openOrder={openOrder} setOpenOrder={setOpenOrder}
+                                     closeInfoPopup={closeInfoPopup} closeOrderPopup={closeOrderPopup}
+                                     sendingOrderInfo={sendingOrderInfo}
+                                     closeOrderInfoPopup={closeOrderInfoPopup}
+                                     openInfoOrderSuccess={openInfoOrderSuccess}
+                                     openInfoOrderFail={openInfoOrderFail}
+                                     catalogArray={bananasArray}/>}/>
             <Route path="/catalog-bento"
-                   element={<Catalog title="Бенто торт" name={name} phone={telephone} catalogArray={bentoArray}/>}/>
-            <Route path="/catalog-bento-premium" element={<Catalog title="Бенто торт" name={name} phone={telephone}
-                                                                   catalogArray={bentoArrayPremium}/>}/>
-            <Route path="/catalog-gifts" element={<Catalog title="Подарочные наборы" name={name} phone={telephone}
-                                                           catalogArray={giftsArray}/>}/>
+                   element={<Catalog title="Бенто торт" name={name} phone={telephone} openInfo={openInfo}
+                                     setOpenInfo={setOpenInfo} openOrder={openOrder} setOpenOrder={setOpenOrder}
+                                     closeInfoPopup={closeInfoPopup} closeOrderPopup={closeOrderPopup}
+                                     sendingOrderInfo={sendingOrderInfo}
+                                     closeOrderInfoPopup={closeOrderInfoPopup}
+                                     openInfoOrderSuccess={openInfoOrderSuccess}
+                                     openInfoOrderFail={openInfoOrderFail} catalogArray={bentoArray}/>}/>
+            <Route path="/catalog-bento-premium"
+                   element={<Catalog title="Бенто торт" name={name} phone={telephone} openInfo={openInfo}
+                                     setOpenInfo={setOpenInfo} openOrder={openOrder} setOpenOrder={setOpenOrder}
+                                     closeInfoPopup={closeInfoPopup} closeOrderPopup={closeOrderPopup}
+                                     sendingOrderInfo={sendingOrderInfo}
+                                     closeOrderInfoPopup={closeOrderInfoPopup}
+                                     openInfoOrderSuccess={openInfoOrderSuccess}
+                                     openInfoOrderFail={openInfoOrderFail}
+                                     catalogArray={bentoArrayPremium}/>}/>
+            <Route path="/catalog-gifts"
+                   element={<Catalog title="Подарочные наборы" name={name} phone={telephone} openInfo={openInfo}
+                                     setOpenInfo={setOpenInfo} openOrder={openOrder} setOpenOrder={setOpenOrder}
+                                     closeInfoPopup={closeInfoPopup} closeOrderPopup={closeOrderPopup}
+                                     sendingOrderInfo={sendingOrderInfo}
+                                     closeOrderInfoPopup={closeOrderInfoPopup}
+                                     openInfoOrderSuccess={openInfoOrderSuccess}
+                                     openInfoOrderFail={openInfoOrderFail}
+                                     catalogArray={giftsArray}/>}/>
             <Route path="/order" element={<OrderPage/>}/>
             <Route path="/about-us" element={<AboutUsPage/>}/>
         </Routes>

@@ -60,6 +60,8 @@ const useInput = (initialValue, validations) => {
 
     return {
         value,
+        setValue,
+        setIsDirty,
         onChange,
         onBlur,
         isDirty,

@@ -6,13 +6,30 @@ import whatsappIcon from "../../images/whatsapp.svg";
 import OrderForm from "../OrderForm/OrderForm";
 
 function OrderPopup(props) {
+    const [isCheckedTelegram, setIsCheckedTelegram] = useState(true);
+    const [isCheckedWhatsApp, setIsCheckedWhatsApp] = useState(false);
+    const [isCheckedCall, setIsCheckedCall] = useState(false);
+    const [isCheckedAll, setIsCheckedAll] = useState(false);
+
+    function handleClose() {
+        props.onCLose();
+        setIsCheckedTelegram(true);
+        setIsCheckedWhatsApp(false);
+        setIsCheckedCall(false);
+        setIsCheckedAll(false);
+    }
+
     return (
         <div className={`order-popup ${props.class}`}>
             <section className="order-popup__container">
-                <button className="order-popup__close-button" onClick={props.onCLose}></button>
+                <button className="order-popup__close-button" onClick={handleClose}></button>
                 <h2 className="order-popup__title">Оставьте свои данные и наш кондитер свяжется с вами</h2>
                 <OrderForm generateMessage={props.generateMessage} onSubmit={props.onSubmit}
                            name={props.name} phone={props.phone} gift={props.gift} message={props.message}
+                           isCheckedTelegram={isCheckedTelegram} setIsCheckedTelegram={setIsCheckedTelegram}
+                           isCheckedWhatsApp={isCheckedWhatsApp} setIsCheckedWhatsApp={setIsCheckedWhatsApp}
+                           isCheckedCall={isCheckedCall} setIsCheckedCall={setIsCheckedCall}
+                           isCheckedAll={isCheckedAll} setIsCheckedAll={setIsCheckedAll}
                 />
                 <span className="order-popup__span">или</span>
                 <p className="order-popup__text">Перейдите в удобный мессенджер для оформления заказа</p>

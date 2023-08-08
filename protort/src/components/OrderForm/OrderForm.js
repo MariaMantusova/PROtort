@@ -1,47 +1,42 @@
-import React, {useState} from "react";
+import React from "react";
 import "./OrderForm.css";
 import CardButton from "../CardButton/CardButton";
 
 function OrderForm(props) {
-    const [isCheckedTelegram, setIsCheckedTelegram] = useState(true);
-    const [isCheckedWhatsApp, setIsCheckedWhatsApp] = useState(false);
-    const [isCheckedCall, setIsCheckedCall] = useState(false);
-    const [isCheckedAll, setIsCheckedAll] = useState(false);
-
     React.useEffect(() => {
-        if (isCheckedTelegram && !isCheckedAll && !isCheckedCall && !isCheckedWhatsApp) {
+        if (props.isCheckedTelegram && !props.isCheckedAll && !props.isCheckedCall && !props.isCheckedWhatsApp) {
             props.generateMessage("Telegram");
         }
     }, [handleChangeName])
 
     React.useEffect(() => {
         switch (true) {
-            case isCheckedAll:
+            case props.isCheckedAll:
                 props.generateMessage("Подойдет любой вариант");
                 break;
-            case isCheckedTelegram === true && isCheckedWhatsApp === true:
+            case props.isCheckedTelegram === true && props.isCheckedWhatsApp === true:
                 props.generateMessage("Telegram/WhatsApp");
                 break;
-            case isCheckedTelegram === true && isCheckedCall === true:
+            case props.isCheckedTelegram === true && props.isCheckedCall === true:
                 props.generateMessage("Telegram/Обычный звонок");
                 break;
-            case isCheckedWhatsApp === true && isCheckedCall === true:
+            case props.isCheckedWhatsApp === true && props.isCheckedCall === true:
                 props.generateMessage("WhatsApp/Обычный звонок");
                 break;
-            case isCheckedTelegram:
+            case props.isCheckedTelegram:
                 props.generateMessage("Telegram");
                 break;
-            case isCheckedWhatsApp:
+            case props.isCheckedWhatsApp:
                 props.generateMessage("WhatsApp");
                 break;
-            case isCheckedCall:
+            case props.isCheckedCall:
                 props.generateMessage("Обычный звонок");
                 break;
         }
 
         handleCheckCheckboxes();
 
-    }, [isCheckedTelegram, isCheckedWhatsApp, isCheckedCall, isCheckedAll])
+    }, [props.isCheckedTelegram, props.isCheckedWhatsApp, props.isCheckedCall, props.isCheckedAll])
 
     function handleChangeName(evt) {
         props.name.onChange(evt);
@@ -54,43 +49,47 @@ function OrderForm(props) {
     }
 
     function handleChangeCheckboxTelegram() {
-        setIsCheckedTelegram(!isCheckedTelegram);
-        setIsCheckedAll(false);
+        props.setIsCheckedTelegram(!props.isCheckedTelegram);
+        props.setIsCheckedAll(false);
     }
 
     function handleChangeCheckboxWhatsapp() {
-        setIsCheckedWhatsApp(!isCheckedWhatsApp);
-        setIsCheckedAll(false);
+        props.setIsCheckedWhatsApp(!props.isCheckedWhatsApp);
+        props.setIsCheckedAll(false);
     }
 
     function handleChangeCheckboxCall() {
-        setIsCheckedCall(!isCheckedCall);
-        setIsCheckedAll(false);
+        props.setIsCheckedCall(!props.isCheckedCall);
+        props.setIsCheckedAll(false);
     }
 
     function handleChangeCheckboxAll() {
-        if (isCheckedAll) {
-            setIsCheckedAll(false);
-            setIsCheckedTelegram(true);
-            setIsCheckedWhatsApp(false);
-            setIsCheckedCall(false);
-        } else if (!isCheckedAll) {
-            setIsCheckedAll(true);
-            setIsCheckedTelegram(true);
-            setIsCheckedWhatsApp(true);
-            setIsCheckedCall(true);
+        if (props.isCheckedAll) {
+            props.setIsCheckedAll(false);
+            props.setIsCheckedTelegram(true);
+            props.setIsCheckedWhatsApp(false);
+            props.setIsCheckedCall(false);
+        } else if (!props.isCheckedAll) {
+            props.setIsCheckedAll(true);
+            props.setIsCheckedTelegram(true);
+            props.setIsCheckedWhatsApp(true);
+            props.setIsCheckedCall(true);
         }
     }
 
     function handleCheckCheckboxes() {
-        if (isCheckedWhatsApp && isCheckedTelegram && isCheckedCall) {
-            setIsCheckedAll(true);
+        if (props.isCheckedWhatsApp && props.isCheckedTelegram && props.isCheckedCall) {
+            props.setIsCheckedAll(true);
         }
     }
 
     function handleSubmit(evt) {
         evt.preventDefault();
         props.onSubmit(props.message);
+        props.setIsCheckedTelegram(true);
+        props.setIsCheckedWhatsApp(false);
+        props.setIsCheckedCall(false);
+        props.setIsCheckedAll(false);
     }
 
     return (
@@ -115,30 +114,30 @@ function OrderForm(props) {
             <span className="order-popup__input-error">Введен некорректный номер телефона.</span>}
             <div className="order-checkbox__container">
                 <h2 className="order-checkbox__title">Выберите удобный тип связи:</h2>
-                {(!isCheckedTelegram && !isCheckedAll && !isCheckedCall && !isCheckedWhatsApp) &&
+                {(!props.isCheckedTelegram && !props.isCheckedAll && !props.isCheckedCall && !props.isCheckedWhatsApp) &&
                 <span className="order-popup__checkbox-error">Выберите минимум 1 тип связи.</span>}
                 <label htmlFor="Telegram" className="order-popup__label-checkbox">
                     <input type="checkbox" className="order-popup__checkbox" id="Telegram" name="accessType"
-                           disabled={isCheckedAll} value="Telegram" onChange={handleChangeCheckboxTelegram}
-                           checked={isCheckedTelegram}
-                           required={!(isCheckedTelegram || isCheckedAll || isCheckedCall || isCheckedWhatsApp)}/>
+                           disabled={props.isCheckedAll} value="Telegram" onChange={handleChangeCheckboxTelegram}
+                           checked={props.isCheckedTelegram}
+                           required={!(props.isCheckedTelegram || props.isCheckedAll || props.isCheckedCall || props.isCheckedWhatsApp)}/>
                     Telegram</label>
                 <label htmlFor="WhatsApp" className="order-popup__label-checkbox">
                     <input type="checkbox" className="order-popup__checkbox" id="WhatsApp" name="accessType"
-                           disabled={isCheckedAll} value="WhatsApp" onChange={handleChangeCheckboxWhatsapp}
-                           checked={isCheckedWhatsApp}
-                           required={!(isCheckedTelegram || isCheckedAll || isCheckedCall || isCheckedWhatsApp)}/>
+                           disabled={props.isCheckedAll} value="WhatsApp" onChange={handleChangeCheckboxWhatsapp}
+                           checked={props.isCheckedWhatsApp}
+                           required={!(props.isCheckedTelegram || props.isCheckedAll || props.isCheckedCall || props.isCheckedWhatsApp)}/>
                     WhatsApp</label>
                 <label htmlFor="Call" className="order-popup__label-checkbox">
                     <input type="checkbox" className="order-popup__checkbox" id="Call" name="accessType"
-                           disabled={isCheckedAll} value="Call" onChange={handleChangeCheckboxCall}
-                           checked={isCheckedCall}
-                           required={!(isCheckedTelegram || isCheckedAll || isCheckedCall || isCheckedWhatsApp)}/>
+                           disabled={props.isCheckedAll} value="Call" onChange={handleChangeCheckboxCall}
+                           checked={props.isCheckedCall}
+                           required={!(props.isCheckedTelegram || props.isCheckedAll || props.isCheckedCall || props.isCheckedWhatsApp)}/>
                     Обычный звонок</label>
                 <label htmlFor="All" className="order-popup__label-checkbox">
                     <input type="checkbox" className="order-popup__checkbox" id="All" name="accessType"
-                           value="All" onChange={handleChangeCheckboxAll} checked={isCheckedAll}
-                           required={!(isCheckedTelegram || isCheckedAll || isCheckedCall || isCheckedWhatsApp)}/>
+                           value="All" onChange={handleChangeCheckboxAll} checked={props.isCheckedAll}
+                           required={!(props.isCheckedTelegram || props.isCheckedAll || props.isCheckedCall || props.isCheckedWhatsApp)}/>
                     Подойдет любой вариант</label>
             </div>
             <CardButton class="order-checkbox__button" text="Отправить заявку"/>
