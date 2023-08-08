@@ -14,12 +14,20 @@ function Catalog(props) {
                 <h1 className="gifts__title">{props.title}</h1>
                 <ul className="gifts__list">
                     {props.catalogArray.map((catalogItem, index) => (
-                        <Gift key={index} indx={index} catalogItem={catalogItem}/>
+                        <Gift key={index} indx={index} name={props.name} phone={props.phone} openInfo={props.openInfo}
+                              setOpenInfo={props.setOpenInfo} openOrder={props.openOrder}
+                              setOpenOrder={props.setOpenOrder} catalogItem={catalogItem}
+                              closeInfoPopup={props.closeInfoPopup} closeOrderPopup={props.closeOrderPopup}
+                              sendingOrderInfo={props.sendingOrderInfo}
+                              closeOrderInfoPopup={props.closeOrderInfoPopup}
+                              openInfoOrderSuccess={props.openInfoOrderSuccess}
+                              openInfoOrderFail={props.openInfoOrderFail}
+                        />
                     ))}
                 </ul>
             </section>
-           <Footer/>
-       </>
+            <Footer/>
+        </>
     )
 }
 
