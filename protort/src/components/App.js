@@ -108,7 +108,13 @@ function App() {
                                      openInfoOrderSuccess={openInfoOrderSuccess}
                                      openInfoOrderFail={openInfoOrderFail}
                                      catalogArray={giftsArray}/>}/>
-            <Route path="/order" element={<OrderPage/>}/>
+            <Route path="/order" element={<OrderPage name={name} phone={telephone} openInfo={openInfo}
+                                                     setOpenInfo={setOpenInfo} openOrder={openOrder} setOpenOrder={setOpenOrder}
+                                                     closeInfoPopup={closeInfoPopup} closeOrderPopup={closeOrderPopup}
+                                                     sendingOrderInfo={sendingOrderInfo}
+                                                     closeOrderInfoPopup={closeOrderInfoPopup}
+                                                     openInfoOrderSuccess={openInfoOrderSuccess}
+                                                     openInfoOrderFail={openInfoOrderFail} />}/>
             <Route path="/about-us" element={<AboutUsPage/>}/>
         </Routes>
     );

@@ -36,7 +36,7 @@ function OrderForm(props) {
 
         handleCheckCheckboxes();
 
-    }, [props.isCheckedTelegram, props.isCheckedWhatsApp, props.isCheckedCall, props.isCheckedAll])
+    }, [props.isCheckedTelegram, props.isCheckedWhatsApp, props.isCheckedCall, props.isCheckedAll, handleChangeName, handleChangePhone])
 
     function handleChangeName(evt) {
         props.name.onChange(evt);
@@ -93,9 +93,9 @@ function OrderForm(props) {
     }
 
     return (
-        <form className="order-popup__form" onSubmit={handleSubmit}>
+        <form className={`order-popup__form ${props.classForm}`} onSubmit={handleSubmit}>
             <label htmlFor="name" className="order-popup__label">Имя</label>
-            <input type="text" onBlur={props.name.onBlur} className="order-popup__input" minLength="2"
+            <input type="text" onBlur={props.name.onBlur} className={`order-popup__input ${props.classInput}`} minLength="2"
                    maxLength="30" name="name"
                    placeholder="Марина" pattern="^[A-Za-zа-яА-ЯЁё]+$" onChange={handleChangeName}
                    value={props.name.value || ""} required/>
@@ -104,7 +104,7 @@ function OrderForm(props) {
             {(props.name.isDirty && props.name.nameError && !props.name.isEmpty) &&
             <span className="order-popup__input-error">Данное имя нельзя использовать.</span>}
             <label htmlFor="phoneNumber" className="order-popup__label">Номер телефона</label>
-            <input type="tel" onBlur={props.phone.onBlur} className="order-popup__input" name="phoneNumber"
+            <input type="tel" onBlur={props.phone.onBlur} className={`order-popup__input ${props.classInput}`}  name="phoneNumber"
                    value={props.phone.value || ""}
                    onChange={handleChangePhone} pattern="^\+7[0-9]{3}[0-9]{7}$" placeholder="+7 949 123 45 67"
                    required/>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import "./OrderPage.css";
 import ScrollingLine from "../ScrollingLine/ScrollingLine";
 import Header from "../Header/Header";
@@ -6,8 +6,26 @@ import Footer from "../Footer/Footer";
 import SocialNetwork from "../SocialNetwork/SocialNetwork";
 import telegramIcon from "../../images/telegramm.svg";
 import whatsappIcon from "../../images/whatsapp.svg";
+import OrderForm from "../OrderForm/OrderForm";
 
-function OrderPage() {
+function OrderPage(props) {
+    const [message, setMessage] = useState("");
+    const [isCheckedTelegram, setIsCheckedTelegram] = useState(true);
+    const [isCheckedWhatsApp, setIsCheckedWhatsApp] = useState(false);
+    const [isCheckedCall, setIsCheckedCall] = useState(false);
+    const [isCheckedAll, setIsCheckedAll] = useState(false);
+
+    function generateMessage(connectionType) {
+        setMessage(
+            `Марина! Тебе пришел заказ.
+                   Данные по заказу:
+                   1. Номер телефона заказчика: ${props.phone.value},
+                   2. Имя заказчика: ${props.name.value},
+                   3. Хотят заказть: нужно помочь с выбором,
+                   4. Связаться через: ${connectionType}`
+        )
+    }
+
     return(
         <>
             <ScrollingLine/>
@@ -22,12 +40,20 @@ function OrderPage() {
                                    alt="вотсапп ссылка и лого"/>
                 </ul>
                 <h3 className="order__text-span">или</h3>
-                <h2 className="order__text">Оставьте свой номер и наш кондитер сам свяжется с вами</h2>
-                <form className="order__form">
-                    <label className="order__label">
-                        <input className="order__input" type="tel" placeholder="+7 949 409 56 56" required/>
-                    </label>
-                </form>
+                <h2 className="order__text">Заполните форму и наш кондитер сам свяжется с вами</h2>
+                <OrderForm name={props.name} phone={props.phone} openInfo={props.openInfo}
+                           setOpenInfo={props.setOpenInfo} openOrder={props.openOrder} setOpenOrder={props.setOpenOrder}
+                           closeInfoPopup={props.closeInfoPopup} closeOrderPopup={props.closeOrderPopup}
+                           onSubmit={props.sendingOrderInfo}
+                           closeOrderInfoPopup={props.closeOrderInfoPopup}
+                           openInfoOrderSuccess={props.openInfoOrderSuccess}
+                           openInfoOrderFail={props.openInfoOrderFail}
+                           isCheckedTelegram={isCheckedTelegram} setIsCheckedTelegram={setIsCheckedTelegram}
+                           isCheckedWhatsApp={isCheckedWhatsApp} setIsCheckedWhatsApp={setIsCheckedWhatsApp}
+                           isCheckedCall={isCheckedCall} setIsCheckedCall={setIsCheckedCall} generateMessage={generateMessage}
+                           isCheckedAll={isCheckedAll} setIsCheckedAll={setIsCheckedAll} message={message}
+                           classForm="order-popup__form_type-page" classInput="order-popup__input_type-page"
+                />
             </section>
             <Footer/>
         </>
