@@ -103,6 +103,8 @@ function OrderForm(props) {
             <span className="order-popup__input-error">Поле не может быть пустым.</span>}
             {(props.name.isDirty && props.name.nameError && !props.name.isEmpty) &&
             <span className="order-popup__input-error">Данное имя нельзя использовать.</span>}
+            {(props.name.isDirty && props.name.minLengthError && !props.name.nameError && !props.name.isEmpty) &&
+            <span className="order-popup__input-error">Данное имя слишком короткое.</span>}
             <label htmlFor="phoneNumber" className="order-popup__label">Номер телефона</label>
             <input type="tel" onBlur={props.phone.onBlur} className={`order-popup__input ${props.classInput}`}  name="phoneNumber"
                    value={props.phone.value || ""}
