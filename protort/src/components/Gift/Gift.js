@@ -5,15 +5,19 @@ import CardButton from "../CardButton/CardButton";
 import {telegramApi} from "../../utils/TelegramApi";
 import {useInput} from "../../utils/ValidationHook";
 import OrderPopup from "../OrderPopup/OrderPopup";
+import InfoAboutOrderPopup from "../InfoAboutOrderPopup/InfoAboutOrderPopup";
+import iconSuccess from "../../images/icon-success.svg";
+import iconFail from "../../images/icon-fail.svg";
 
 function Gift(props) {
     const [openInfo, setOpenInfo] = useState(false);
     const [openOrder, setOpenOrder] = useState(false);
+    const [openInfoOrderSuccess, setOpenInfoOrderSuccess] = useState(false);
+    const [openInfoOrderFail, setOpenInfoOrderFail] = useState(false);
     const [gift, setGift] = useState({});
     const [message, setMessage] = useState("");
     const name = useInput('', {isEmpty: true, isName: true, minLength: 2});
     const telephone = useInput('', {isEmpty: true, isTelephone: true});
-
 
     function openInfoPopup() {
         setOpenInfo(true);
@@ -32,12 +36,21 @@ function Gift(props) {
         setOpenOrder(false);
     }
 
+    function closeOrderInfoPopup() {
+        setOpenInfoOrderSuccess(false);
+        setOpenInfoOrderFail(false);
+    }
+
     function sendingOrderToTg() {
         telegramApi.sendOrder(message)
-            .then((res) => {
+            .then(() => {
+                closeInfoPopup();
+                closeOrderPopup();
+                setOpenInfoOrderSuccess(true);
             })
             .catch((err) => {
-                console.log(err)
+                setOpenInfoOrderFail(true);
+                console.log(err);
             })
     }
 
@@ -75,6 +88,12 @@ function Gift(props) {
                         nameMinLengthError={name.minLengthError} phoneDirty={telephone.isDirty}
                         phoneError={telephone.telephoneError} onNameBlur={name.onBlur} nameIsEmpty={name.isEmpty}
                         onPhoneBlur={telephone.onBlur} phoneIsEmpty={telephone.isEmpty} onCLose={closeOrderPopup}/>
+            <InfoAboutOrderPopup alt="Иконка успешного отправления данных" onClick={closeOrderInfoPopup}
+                                class={openInfoOrderSuccess && "order-info__popup_visible"} image={iconSuccess} text="Форма успешно заполнена!
+            Наш&nbsp;кондитер свяжется с вами в течение часа!"/>
+            <InfoAboutOrderPopup alt="Иконка ошибки при отправлении данных" onClick={closeOrderInfoPopup}
+                                 class={openInfoOrderFail && "order-info__popup_visible"} image={iconFail} text="Что-то пошло не так...
+           Заполните,&nbsp;пожалуйста, форму еще раз."/>
         </>
     )
 }
